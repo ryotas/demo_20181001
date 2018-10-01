@@ -12,6 +12,12 @@ Before running the script, open database,
     SQL> ALTER PLUGGABLE DATABASE orcl OPEN; -- if not open yet
     SQL> exit
 
+Locate sample data (not included in this repository).
+
+    $ cd demo_20181001
+    $ mkdir data
+    $ mv <path>/*-20180913.csv data/
+
 Run the all scripts.
 
     $ run.sh
