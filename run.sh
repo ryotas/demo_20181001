@@ -44,7 +44,13 @@ echo "**************************"
 echo "Creating Database tables.."
 echo "**************************"
 
+rm -r /tmp/demo
 mkdir /tmp/demo
 sqlplus demo/welcome1@orcl @sql/directory.sql
+sqlplus demo/welcome1@orcl @sql/table_account.sql
+sqlplus demo/welcome1@orcl @sql/table_balance.sql
 sqlplus demo/welcome1@orcl @sql/table_branch.sql
+sqlplus demo/welcome1@orcl @sql/table_customer.sql
+sqlplus demo/welcome1@orcl @sql/table_product.sql
+sqlplus demo/welcome1@orcl @sql/table_transaction.sql
 

@@ -29,4 +29,6 @@ create table account (
 , lastcredittransdttm string
 , lastdebittransdttm string
 )
-row format delimited fields terminated by '|';
+row format delimited fields terminated by '|'
+tblproperties("skip.header.line.count"="1")
+;
