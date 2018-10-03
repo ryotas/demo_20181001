@@ -1,0 +1,2627 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<WorkflowProcess Version="12.2.0.0.1" DBVersion="12.1.0.2.0" Schema="" xmlns="http://xmlns.oracle.com/odmr11">
+    <Nodes>
+        <DataSource Id="10022" Name="ACCOUNT" Status="Complete">
+            <Icon XCOORD="59" YCOORD="113"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <InMemoryColumnar Enable="false">
+                <PriorityLevel>PRIORITY NONE</PriorityLevel>
+                <CompressionMethod>INMEMORY MEMCOMPRESS FOR QUERY LOW</CompressionMethod>
+            </InMemoryColumnar>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10022" as (select "ACCOUNT"."CUSTOMERCODE", 
+"ACCOUNT"."CLOSED", 
+"ACCOUNT"."DATEOFDORMANCY", 
+"ACCOUNT"."LASTCREDITTRANSDTTM", 
+"ACCOUNT"."DEBITBASECODE", 
+"ACCOUNT"."STATUS", 
+"ACCOUNT"."DORMANTSTATUS", 
+"ACCOUNT"."OPENEDBYTELLER", 
+"ACCOUNT"."PRODUCT", 
+"ACCOUNT"."BRANCHCODE", 
+"ACCOUNT"."ACCOUNTID", 
+"ACCOUNT"."CLOSUREDATE", 
+"ACCOUNT"."UBMODEOFOPERATION", 
+"ACCOUNT"."ENROLLMENTCODE", 
+"ACCOUNT"."DEBITLIMIT", 
+"ACCOUNT"."RECLASTMODIFIEDDATE", 
+"ACCOUNT"."CURRENCY", 
+"ACCOUNT"."LASTTRANSACTIONDATE", 
+"ACCOUNT"."LOWESTBALANCE", 
+"ACCOUNT"."CREDITBASECODE", 
+"ACCOUNT"."CREDITLIMIT", 
+"ACCOUNT"."DORMANTDATE", 
+"ACCOUNT"."LOANPRINCIPALAMOUNT", 
+"ACCOUNT"."INTERESTSTARTDATE", 
+"ACCOUNT"."LOWESTBALANCEDATE", 
+"ACCOUNT"."SEGMENTATION", 
+"ACCOUNT"."LASTDEBITTRANSDTTM", 
+"ACCOUNT"."DATEOPENED" 
+from "DEMO"."ACCOUNT"  )</SQLExpression>
+            <Attributes>
+                <Attribute Name="CUSTOMERCODE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CLOSED" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="DATEOFDORMANCY" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute Name="LASTCREDITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute Name="DEBITBASECODE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="STATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="DORMANTSTATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="OPENEDBYTELLER" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="PRODUCT" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="BRANCHCODE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CLOSUREDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute Name="UBMODEOFOPERATION" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="ENROLLMENTCODE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="DEBITLIMIT" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="RECLASTMODIFIEDDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute Name="CURRENCY" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="LASTTRANSACTIONDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute Name="LOWESTBALANCE" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CREDITBASECODE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CREDITLIMIT" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="DORMANTDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute Name="LOANPRINCIPALAMOUNT" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="INTERESTSTARTDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute Name="LOWESTBALANCEDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute Name="SEGMENTATION" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="LASTDEBITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute Name="DATEOPENED" DataType="TIMESTAMP(6)" Status="Valid"/>
+            </Attributes>
+            <SourceTable Schema="" Name="ACCOUNT" Synonym="false"/>
+            <JSONColumns/>
+            <DataGuideSettings Generate="true" UseFullData="false" UseFullDoc="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <NumberOfValues>10000</NumberOfValues>
+            </DataGuideSettings>
+        </DataSource>
+        <DataSource Id="10048" Name="CUSTOMER" Status="Complete">
+            <Icon XCOORD="56" YCOORD="275"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <InMemoryColumnar Enable="false">
+                <PriorityLevel>PRIORITY NONE</PriorityLevel>
+                <CompressionMethod>INMEMORY MEMCOMPRESS FOR QUERY LOW</CompressionMethod>
+            </InMemoryColumnar>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10048" as (select "CUSTOMER"."CUSTOMERCODE", 
+"CUSTOMER"."SHORTNAME", 
+"CUSTOMER"."FIRSTNAME", 
+"CUSTOMER"."UBRELATIONSHIPMGRID", 
+"CUSTOMER"."SUBCATEGORY", 
+"CUSTOMER"."CUSTOMERTYPE", 
+"CUSTOMER"."KYCSTATUS", 
+"CUSTOMER"."NRCNO", 
+"CUSTOMER"."CUSTOMERSUBTYPE", 
+"CUSTOMER"."LASTNAME", 
+"CUSTOMER"."DATEMODIFIED", 
+"CUSTOMER"."DOB", 
+"CUSTOMER"."SEGMENTATION", 
+"CUSTOMER"."GENDER", 
+"CUSTOMER"."ADDRESSLINE3", 
+"CUSTOMER"."ADDRESSLINE2", 
+"CUSTOMER"."ADDRESSLINE5", 
+"CUSTOMER"."ADDRESSLINE4", 
+"CUSTOMER"."BLACKLISTED", 
+"CUSTOMER"."DATECREATED" 
+from "DEMO"."CUSTOMER"  )</SQLExpression>
+            <Attributes>
+                <Attribute Name="CUSTOMERCODE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="SHORTNAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="FIRSTNAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="UBRELATIONSHIPMGRID" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="SUBCATEGORY" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUSTOMERTYPE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="KYCSTATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="NRCNO" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUSTOMERSUBTYPE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="LASTNAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="DATEMODIFIED" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="DOB" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="SEGMENTATION" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="GENDER" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="ADDRESSLINE3" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="ADDRESSLINE2" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="ADDRESSLINE5" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="ADDRESSLINE4" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="BLACKLISTED" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="DATECREATED" DataType="VARCHAR2" Status="Valid"/>
+            </Attributes>
+            <SourceTable Schema="" Name="CUSTOMER" Synonym="false"/>
+            <JSONColumns/>
+            <DataGuideSettings Generate="true" UseFullData="false" UseFullDoc="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <NumberOfValues>10000</NumberOfValues>
+            </DataGuideSettings>
+        </DataSource>
+        <Transformation Id="10031" Name="Transform 1" Status="Complete">
+            <Icon XCOORD="172" YCOORD="126"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <InMemoryColumnar Enable="false">
+                <PriorityLevel>PRIORITY NONE</PriorityLevel>
+                <CompressionMethod>INMEMORY MEMCOMPRESS FOR QUERY LOW</CompressionMethod>
+            </InMemoryColumnar>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10031" AS ( SELECT "CUSTOMERCODE",
+  "CLOSED",
+  "DATEOFDORMANCY",
+  "LASTCREDITTRANSDTTM",
+  "DEBITBASECODE",
+  "STATUS",
+  "DORMANTSTATUS",
+  "OPENEDBYTELLER",
+  "PRODUCT",
+  "BRANCHCODE",
+  "ACCOUNTID",
+  "CLOSUREDATE",
+  "UBMODEOFOPERATION",
+  "ENROLLMENTCODE",
+  "DEBITLIMIT",
+  "RECLASTMODIFIEDDATE",
+  "CURRENCY",
+  "LASTTRANSACTIONDATE",
+  "LOWESTBALANCE",
+  "CREDITBASECODE",
+  "CREDITLIMIT",
+  "DORMANTDATE",
+  "LOANPRINCIPALAMOUNT",
+  "INTERESTSTARTDATE",
+  "LOWESTBALANCEDATE",
+  "SEGMENTATION",
+  "LASTDEBITTRANSDTTM",
+  "DATEOPENED",CASE PRODUCT
+  WHEN '21051' THEN 1
+  ELSE 0
+END as "SMART" FROM {INPUT_SOURCE} ) </SQLExpression>
+            <TransformationSourceAttributes>
+                <TransformationSourceAttributeType Name="CUSTOMERCODE" DataType="VARCHAR2" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="CLOSED" DataType="VARCHAR2" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="DATEOFDORMANCY" DataType="TIMESTAMP(6)" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="LASTCREDITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="DEBITBASECODE" DataType="VARCHAR2" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="STATUS" DataType="VARCHAR2" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="DORMANTSTATUS" DataType="VARCHAR2" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="OPENEDBYTELLER" DataType="VARCHAR2" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="PRODUCT" DataType="VARCHAR2" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="BRANCHCODE" DataType="VARCHAR2" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="CLOSUREDATE" DataType="TIMESTAMP(6)" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="UBMODEOFOPERATION" DataType="VARCHAR2" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="ENROLLMENTCODE" DataType="VARCHAR2" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="DEBITLIMIT" DataType="NUMBER" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="RECLASTMODIFIEDDATE" DataType="TIMESTAMP(6)" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="CURRENCY" DataType="VARCHAR2" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="LASTTRANSACTIONDATE" DataType="TIMESTAMP(6)" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="LOWESTBALANCE" DataType="NUMBER" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="CREDITBASECODE" DataType="VARCHAR2" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="CREDITLIMIT" DataType="NUMBER" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="DORMANTDATE" DataType="TIMESTAMP(6)" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="LOANPRINCIPALAMOUNT" DataType="NUMBER" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="INTERESTSTARTDATE" DataType="TIMESTAMP(6)" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="LOWESTBALANCEDATE" DataType="TIMESTAMP(6)" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="SEGMENTATION" DataType="VARCHAR2" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="LASTDEBITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="DATEOPENED" DataType="TIMESTAMP(6)" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+            </TransformationSourceAttributes>
+            <TransformedAttributes>
+                <MapTransformedSourceType>
+                    <key Name="SMART" DataType="NUMBER" Status="Valid">
+                        <IsOutput>true</IsOutput>
+                        <TransformationElementType>
+                            <CustomTransformationEx>CASE PRODUCT
+  WHEN '21051' THEN 1
+  ELSE 0
+END</CustomTransformationEx>
+                        </TransformationElementType>
+                        <Modified>false</Modified>
+                    </key>
+                    <StringCollectionNames/>
+                </MapTransformedSourceType>
+            </TransformedAttributes>
+            <DataProfileSettings>
+                <NumericalBins>10</NumericalBins>
+                <CategoricalBins>10</CategoricalBins>
+                <DateBins>10</DateBins>
+            </DataProfileSettings>
+            <SampleSettings UseFullData="false" GenerateCache="true">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <Random Seed="12345"/>
+                </Method>
+                <OutputTable Name="ODMR$12_52_51_941205TNEQRYM" CreationDate="2018-10-02T12:53:28"/>
+            </SampleSettings>
+            
+            <StatsSelection percentdistinct="true" percentnull="true" max="true" min="true" avg="true" std="true" var="true" kurtosis="false" median="true" skewness="false" mode="true" modesampled="true" modeall="false" histogram="true" rowcount="1832"/>
+        </Transformation>
+        <Join UseCartesian="false" Id="10049" Name="Join" Status="Complete">
+            <Icon XCOORD="172" YCOORD="297"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <InMemoryColumnar Enable="false">
+                <PriorityLevel>PRIORITY NONE</PriorityLevel>
+                <CompressionMethod>INMEMORY MEMCOMPRESS FOR QUERY LOW</CompressionMethod>
+            </InMemoryColumnar>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10049" as (SELECT 
+"CUSTOMER"."CUSTOMERCODE"
+, "CUSTOMER"."SHORTNAME"
+, "CUSTOMER"."FIRSTNAME"
+, "CUSTOMER"."UBRELATIONSHIPMGRID"
+, "CUSTOMER"."SUBCATEGORY"
+, "CUSTOMER"."CUSTOMERTYPE"
+, "CUSTOMER"."KYCSTATUS"
+, "CUSTOMER"."NRCNO"
+, "CUSTOMER"."CUSTOMERSUBTYPE"
+, "CUSTOMER"."LASTNAME"
+, "CUSTOMER"."DATEMODIFIED"
+, "CUSTOMER"."DOB"
+, "CUSTOMER"."SEGMENTATION"
+, "CUSTOMER"."GENDER"
+, "CUSTOMER"."ADDRESSLINE3"
+, "CUSTOMER"."ADDRESSLINE2"
+, "CUSTOMER"."ADDRESSLINE5"
+, "CUSTOMER"."ADDRESSLINE4"
+, "CUSTOMER"."BLACKLISTED"
+, "CUSTOMER"."DATECREATED"
+, "Transform 1"."SMART"
+
+FROM
+{INPUT_SOURCE:10048} "CUSTOMER"
+INNER JOIN {INPUT_SOURCE:10031} "Transform 1"
+ON "CUSTOMER"."CUSTOMERCODE" = "Transform 1"."CUSTOMERCODE"
+
+ )</SQLExpression>
+            <KeyColumns AutoSpec="No">
+                <JoinColumn Type="Inner">
+                    <LeftColumn NodeId="10048" NodeName="CUSTOMER" Key="Yes" Name="CUSTOMERCODE" DataType="VARCHAR2" Status="Valid"/>
+                    <RightColumn NodeId="10031" NodeName="Transform 1" Key="Yes" Name="CUSTOMERCODE" DataType="VARCHAR2" Status="Valid"/>
+                </JoinColumn>
+            </KeyColumns>
+            <OutputColumns AutoSpec="No">
+                <RefDBColumn NodeId="10048" NodeName="CUSTOMER" Name="CUSTOMERCODE" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10048" NodeName="CUSTOMER" Name="SHORTNAME" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10048" NodeName="CUSTOMER" Name="FIRSTNAME" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10048" NodeName="CUSTOMER" Name="UBRELATIONSHIPMGRID" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10048" NodeName="CUSTOMER" Name="SUBCATEGORY" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10048" NodeName="CUSTOMER" Name="CUSTOMERTYPE" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10048" NodeName="CUSTOMER" Name="KYCSTATUS" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10048" NodeName="CUSTOMER" Name="NRCNO" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10048" NodeName="CUSTOMER" Name="CUSTOMERSUBTYPE" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10048" NodeName="CUSTOMER" Name="LASTNAME" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10048" NodeName="CUSTOMER" Name="DATEMODIFIED" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10048" NodeName="CUSTOMER" Name="DOB" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10048" NodeName="CUSTOMER" Name="SEGMENTATION" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10048" NodeName="CUSTOMER" Name="GENDER" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10048" NodeName="CUSTOMER" Name="ADDRESSLINE3" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10048" NodeName="CUSTOMER" Name="ADDRESSLINE2" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10048" NodeName="CUSTOMER" Name="ADDRESSLINE5" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10048" NodeName="CUSTOMER" Name="ADDRESSLINE4" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10048" NodeName="CUSTOMER" Name="BLACKLISTED" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10048" NodeName="CUSTOMER" Name="DATECREATED" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10031" NodeName="Transform 1" Name="SMART" DataType="NUMBER" Status="Valid"/>
+            </OutputColumns>
+        </Join>
+        <ColumnFilter Id="10033" Name="Filter Columns 1" Status="Complete">
+            <Icon XCOORD="308" YCOORD="145"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <InMemoryColumnar Enable="false">
+                <PriorityLevel>PRIORITY NONE</PriorityLevel>
+                <CompressionMethod>INMEMORY MEMCOMPRESS FOR QUERY LOW</CompressionMethod>
+            </InMemoryColumnar>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10033" as (
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SELECT 
+"ACCOUNTID","BRANCHCODE","CLOSUREDATE","CREDITBASECODE","CREDITLIMIT","CURRENCY","DATEOFDORMANCY","DATEOPENED","DEBITBASECODE","DORMANTDATE","INTERESTSTARTDATE","LASTCREDITTRANSDTTM","LASTDEBITTRANSDTTM","LASTTRANSACTIONDATE","LOWESTBALANCE","LOWESTBALANCEDATE","OPENEDBYTELLER","PRODUCT","RECLASTMODIFIEDDATE","SMART","UBMODEOFOPERATION"
+FROM {INPUT_SOURCE}
+ )</SQLExpression>
+            <ColumnFilterSettings SamplingEnabled="true" NumberOfRows="10000">
+                <DataQualitySettings NullsPercent="95.0" UniquePercent="95.0" ConstantPercent="95.0"/>
+                <AttrImportantSettings CutOff="0.0" TopN="100" AttributeDependency="true">
+                    <TargetAttribute Name="SMART" DataType="NUMBER" Status="Valid"/>
+                </AttrImportantSettings>
+            </ColumnFilterSettings>
+            <ColumnFilterAttributes AutoSpec="No" AutomaticFilterEnable="No">
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="BRANCHCODE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="CLOSED" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CLOSUREDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CREDITBASECODE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CREDITLIMIT" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CURRENCY" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="CUSTOMERCODE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="DATEOFDORMANCY" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="DATEOPENED" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="DEBITBASECODE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="DEBITLIMIT" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="DORMANTDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="DORMANTSTATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="ENROLLMENTCODE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="INTERESTSTARTDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="LASTCREDITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="LASTDEBITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="LASTTRANSACTIONDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="LOANPRINCIPALAMOUNT" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="LOWESTBALANCE" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="LOWESTBALANCEDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="OPENEDBYTELLER" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="PRODUCT" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="RECLASTMODIFIEDDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="SEGMENTATION" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="SMART" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="STATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="UBMODEOFOPERATION" DataType="VARCHAR2" Status="Valid"/>
+            </ColumnFilterAttributes>
+            <ColumnFilterResults DataQualityOutput="ODMR$13_10_15_153069XYVYNLT" AttrImportanceOutput="ODMR$FILTER_COLUMNS_1_AI" AttrDependencyOutput="ODMR$13_10_15_946503MKXZEWG" GenerateImportanceOutput="true">
+                <Attribute Name="ACCOUNTID">
+                    <Reason Type="UNIQUE_LIMIT"/>
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="BRANCHCODE"/>
+                <Attribute Name="CLOSED">
+                    <Reason Type="CONSTANT_LIMIT"/>
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CLOSUREDATE"/>
+                <Attribute Name="CREDITBASECODE"/>
+                <Attribute Name="CREDITLIMIT"/>
+                <Attribute Name="CURRENCY"/>
+                <Attribute Name="CUSTOMERCODE">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="DATEOFDORMANCY"/>
+                <Attribute Name="DATEOPENED"/>
+                <Attribute Name="DEBITBASECODE"/>
+                <Attribute Name="DEBITLIMIT">
+                    <Reason Type="CONSTANT_LIMIT"/>
+                </Attribute>
+                <Attribute Name="DORMANTDATE"/>
+                <Attribute Name="DORMANTSTATUS">
+                    <Reason Type="CONSTANT_LIMIT"/>
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="ENROLLMENTCODE">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="INTERESTSTARTDATE"/>
+                <Attribute Name="LASTCREDITTRANSDTTM"/>
+                <Attribute Name="LASTDEBITTRANSDTTM"/>
+                <Attribute Name="LASTTRANSACTIONDATE"/>
+                <Attribute Name="LOANPRINCIPALAMOUNT">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="LOWESTBALANCE"/>
+                <Attribute Name="LOWESTBALANCEDATE"/>
+                <Attribute Name="OPENEDBYTELLER"/>
+                <Attribute Name="PRODUCT"/>
+                <Attribute Name="RECLASTMODIFIEDDATE"/>
+                <Attribute Name="SEGMENTATION">
+                    <Reason Type="CONSTANT_LIMIT"/>
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="SMART"/>
+                <Attribute Name="STATUS">
+                    <Reason Type="CONSTANT_LIMIT"/>
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="UBMODEOFOPERATION"/>
+            </ColumnFilterResults>
+        </ColumnFilter>
+        <ColumnFilter Id="10054" Name="Filter Columns 2" Status="Complete">
+            <Icon XCOORD="306" YCOORD="331"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <InMemoryColumnar Enable="false">
+                <PriorityLevel>PRIORITY NONE</PriorityLevel>
+                <CompressionMethod>INMEMORY MEMCOMPRESS FOR QUERY LOW</CompressionMethod>
+            </InMemoryColumnar>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10054" as (
+
+SELECT 
+"DATECREATED","SMART","UBRELATIONSHIPMGRID"
+FROM {INPUT_SOURCE}
+ )</SQLExpression>
+            <ColumnFilterSettings SamplingEnabled="true" NumberOfRows="10000">
+                <DataQualitySettings NullsPercent="95.0" UniquePercent="95.0" ConstantPercent="95.0"/>
+                <AttrImportantSettings CutOff="0.0" TopN="100" AttributeDependency="true">
+                    <TargetAttribute Name="SMART" DataType="NUMBER" Status="Valid"/>
+                </AttrImportantSettings>
+            </ColumnFilterSettings>
+            <ColumnFilterAttributes AutoSpec="No" AutomaticFilterEnable="No">
+                <Attribute AutomaticFiltering="false" Output="No" Name="ADDRESSLINE2" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="ADDRESSLINE3" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="ADDRESSLINE4" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="ADDRESSLINE5" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="BLACKLISTED" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="CUSTOMERCODE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="CUSTOMERSUBTYPE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="CUSTOMERTYPE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="DATECREATED" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="DATEMODIFIED" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="DOB" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="FIRSTNAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="GENDER" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="KYCSTATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="LASTNAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="NRCNO" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="SEGMENTATION" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="SHORTNAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="SMART" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="SUBCATEGORY" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="UBRELATIONSHIPMGRID" DataType="VARCHAR2" Status="Valid"/>
+            </ColumnFilterAttributes>
+            <ColumnFilterResults DataQualityOutput="ODMR$13_57_42_036194DKRWKSX" AttrImportanceOutput="ODMR$FILTER_COLUMNS_2_AI" AttrDependencyOutput="ODMR$13_57_43_003663SKFXOIH" GenerateImportanceOutput="true">
+                <Attribute Name="ADDRESSLINE2">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="ADDRESSLINE3">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="ADDRESSLINE4">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="ADDRESSLINE5">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="BLACKLISTED">
+                    <Reason Type="CONSTANT_LIMIT"/>
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUSTOMERCODE">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUSTOMERSUBTYPE">
+                    <Reason Type="CONSTANT_LIMIT"/>
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUSTOMERTYPE">
+                    <Reason Type="CONSTANT_LIMIT"/>
+                </Attribute>
+                <Attribute Name="DATECREATED"/>
+                <Attribute Name="DATEMODIFIED">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="DOB">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="FIRSTNAME">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="GENDER">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="KYCSTATUS">
+                    <Reason Type="CONSTANT_LIMIT"/>
+                </Attribute>
+                <Attribute Name="LASTNAME">
+                    <Reason Type="NULL_LIMIT"/>
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="NRCNO">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="SEGMENTATION">
+                    <Reason Type="CONSTANT_LIMIT"/>
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="SHORTNAME">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="SMART"/>
+                <Attribute Name="SUBCATEGORY">
+                    <Reason Type="CONSTANT_LIMIT"/>
+                </Attribute>
+                <Attribute Name="UBRELATIONSHIPMGRID"/>
+            </ColumnFilterResults>
+        </ColumnFilter>
+        <ColumnFilter Id="10067" Name="Filter Columns 3" Status="Complete">
+            <Icon XCOORD="306" YCOORD="468"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <InMemoryColumnar Enable="false">
+                <PriorityLevel>PRIORITY NONE</PriorityLevel>
+                <CompressionMethod>INMEMORY MEMCOMPRESS FOR QUERY LOW</CompressionMethod>
+            </InMemoryColumnar>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10067" as (
+
+
+SELECT 
+"CUSTOMERTYPE","GENDER","SEGMENTATION","SMART"
+FROM {INPUT_SOURCE}
+ )</SQLExpression>
+            <ColumnFilterSettings SamplingEnabled="true" NumberOfRows="10000">
+                <DataQualitySettings NullsPercent="95.0" UniquePercent="95.0" ConstantPercent="95.0"/>
+                <AttrImportantSettings CutOff="0.0" TopN="100" AttributeDependency="true">
+                    <TargetAttribute Name="SMART" DataType="NUMBER" Status="Valid"/>
+                </AttrImportantSettings>
+            </ColumnFilterSettings>
+            <ColumnFilterAttributes AutoSpec="No" AutomaticFilterEnable="No">
+                <Attribute AutomaticFiltering="false" Output="No" Name="ADDRESSLINE2" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="ADDRESSLINE3" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="ADDRESSLINE4" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="ADDRESSLINE5" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="BLACKLISTED" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="CUSTOMERCODE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="CUSTOMERSUBTYPE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUSTOMERTYPE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="DATECREATED" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="DATEMODIFIED" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="DOB" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="FIRSTNAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="GENDER" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="KYCSTATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="LASTNAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="NRCNO" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="SEGMENTATION" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="SHORTNAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="SMART" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="SUBCATEGORY" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="UBRELATIONSHIPMGRID" DataType="VARCHAR2" Status="Valid"/>
+            </ColumnFilterAttributes>
+            <ColumnFilterResults DataQualityOutput="ODMR$15_06_32_636412ZXTMRXX" AttrImportanceOutput="ODMR$FILTER_COLUMNS_3_AI" AttrDependencyOutput="ODMR$15_06_33_679979UPPIKEI" GenerateImportanceOutput="true">
+                <Attribute Name="ADDRESSLINE2">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="ADDRESSLINE3">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="ADDRESSLINE4">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="ADDRESSLINE5">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="BLACKLISTED">
+                    <Reason Type="CONSTANT_LIMIT"/>
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUSTOMERCODE">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUSTOMERSUBTYPE">
+                    <Reason Type="CONSTANT_LIMIT"/>
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUSTOMERTYPE">
+                    <Reason Type="CONSTANT_LIMIT"/>
+                </Attribute>
+                <Attribute Name="DATECREATED"/>
+                <Attribute Name="DATEMODIFIED">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="DOB">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="FIRSTNAME">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="GENDER">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="KYCSTATUS">
+                    <Reason Type="CONSTANT_LIMIT"/>
+                </Attribute>
+                <Attribute Name="LASTNAME">
+                    <Reason Type="NULL_LIMIT"/>
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="NRCNO">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="SEGMENTATION">
+                    <Reason Type="CONSTANT_LIMIT"/>
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="SHORTNAME">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="SMART"/>
+                <Attribute Name="SUBCATEGORY">
+                    <Reason Type="CONSTANT_LIMIT"/>
+                </Attribute>
+                <Attribute Name="UBRELATIONSHIPMGRID"/>
+            </ColumnFilterResults>
+        </ColumnFilter>
+        <ClassificationBuild Id="10039" Name="Class Build 2" Status="Ready">
+            <Icon XCOORD="446" YCOORD="112"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <InMemoryColumnar Enable="false">
+                <PriorityLevel>PRIORITY NONE</PriorityLevel>
+                <CompressionMethod>INMEMORY MEMCOMPRESS FOR QUERY LOW</CompressionMethod>
+            </InMemoryColumnar>
+            <BuildDataSource SourceId="10033"/>
+            <CaseAttributes>
+                <Attribute Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+            </CaseAttributes>
+            <MiningAttributes AutoSpec="No">
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="BRANCHCODE" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="CLOSUREDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CREDITBASECODE" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="CREDITLIMIT" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CURRENCY" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DATEOFDORMANCY" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DATEOPENED" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="DEBITBASECODE" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DORMANTDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="INTERESTSTARTDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTCREDITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTDEBITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTTRANSACTIONDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="LOWESTBALANCE" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LOWESTBALANCEDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="OPENEDBYTELLER" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="PRODUCT" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="RECLASTMODIFIEDDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="SMART" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="UBMODEOFOPERATION" DataType="VARCHAR2" Status="Valid"/>
+            </MiningAttributes>
+            <Stoplists>
+                <Stoplist Id="1" Name="Default" Type="Basic" Language="ENGLISH" DBName="">
+                    <StopTokens>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>Mr</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>Mrs</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>Ms</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>a</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>all</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>almost</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>also</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>although</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>an</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>and</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>any</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>are</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>as</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>at</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>be</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>because</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>been</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>both</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>but</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>by</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>can</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>could</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>d</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>did</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>do</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>does</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>either</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>for</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>from</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>had</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>has</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>have</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>having</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>he</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>her</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>here</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>hers</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>him</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>his</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>how</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>however</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>i</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>if</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>in</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>into</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>is</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>it</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>its</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>just</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>ll</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>me</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>might</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>my</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>no</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>non</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>nor</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>not</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>of</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>on</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>one</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>only</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>onto</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>or</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>our</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>ours</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>s</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>shall</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>she</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>should</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>since</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>so</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>some</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>still</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>such</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>t</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>than</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>that</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>the</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>their</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>them</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>then</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>there</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>therefore</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>these</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>they</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>this</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>those</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>though</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>through</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>thus</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>to</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>too</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>until</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>ve</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>very</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>was</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>we</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>were</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>what</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>when</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>where</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>whether</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>which</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>while</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>who</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>whose</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>why</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>will</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>with</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>would</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>yet</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>you</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>your</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>yours</Item>
+                        </Token>
+                    </StopTokens>
+                </Stoplist>
+            </Stoplists>
+            <TextSettings TransformType="Token" CategoricalCutOffValue="200">
+                <Token>
+                    <Token MaxNumberPerDoc="50" MaxNumberAllDocs="3000" Frequency="IDF" StoplistId="1" Policy="">
+                        <Lexer Name="" Type="Basic">
+                            <Settings/>
+                        </Lexer>
+                        <Languages>
+                            <Language Name="ENGLISH" Type="SingleByte"/>
+                        </Languages>
+                    </Token>
+                </Token>
+                <Theme Type="Single">
+                    <Token MaxNumberPerDoc="50" MaxNumberAllDocs="3000" Frequency="IDF" StoplistId="1" Policy="">
+                        <Lexer Type="Basic">
+                            <Settings>
+                                <Attribute Name="index_themes" ValueString="YES" Type="String"/>
+                                <Attribute Name="theme_language" ValueString="ENGLISH" Type="String"/>
+                            </Settings>
+                        </Lexer>
+                        <Languages>
+                            <Language Name="ENGLISH" Type="SingleByte"/>
+                        </Languages>
+                    </Token>
+                </Theme>
+            </TextSettings>
+            <TextAttributes/>
+            <TestDataSource>
+                <SplitData TestPercent="40.0" DataFormat="Table"/>
+            </TestDataSource>
+            <TargetAttribute Name="SMART" DataType="NUMBER" Status="Valid"/>
+            <Models>
+                <NaiveBayesModel Id="10035" Name="CLAS_NB_3_16" Status="Ready" CreationDate="2018-10-02T13:03:25" Annotation="" UseForOutput="true">
+                    <InputMiningData DataUsage="AUTO" MiningUsage="AUTO">
+                        <MiningAttributes>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="BRANCHCODE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="CLOSUREDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CREDITBASECODE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="CREDITLIMIT" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CURRENCY" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DATEOFDORMANCY" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DATEOPENED" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="DEBITBASECODE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DORMANTDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="INTERESTSTARTDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTCREDITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTDEBITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTTRANSACTIONDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="LOWESTBALANCE" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LOWESTBALANCEDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="OPENEDBYTELLER" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="PRODUCT" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="RECLASTMODIFIEDDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="SMART" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="UBMODEOFOPERATION" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+                        </MiningAttributes>
+                    </InputMiningData>
+                    <Performance>
+                        <Balanced WeightsTable="ODMR$13_03_03_702010RSKVTQR"/>
+                    </Performance>
+                    <Tuning>
+                        <None/>
+                    </Tuning>
+                    <NaiveBayesAlgo>
+                        <NABS_PAIRWISE_THRESHOLD>0.0</NABS_PAIRWISE_THRESHOLD>
+                        <NABS_SINGLETON_THRESHOLD>0.0</NABS_SINGLETON_THRESHOLD>
+                    </NaiveBayesAlgo>
+                </NaiveBayesModel>
+                <DecisionTreeModel Id="10036" Name="CLAS_DT_3_16" Status="Ready" CreationDate="2018-10-02T13:03:39" Annotation="" UseForOutput="true">
+                    <InputMiningData DataUsage="AUTO" MiningUsage="AUTO">
+                        <MiningAttributes>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="BRANCHCODE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="CLOSUREDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CREDITBASECODE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="CREDITLIMIT" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CURRENCY" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DATEOFDORMANCY" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DATEOPENED" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="DEBITBASECODE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DORMANTDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="INTERESTSTARTDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTCREDITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTDEBITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTTRANSACTIONDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="LOWESTBALANCE" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LOWESTBALANCEDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="OPENEDBYTELLER" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="PRODUCT" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="RECLASTMODIFIEDDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="SMART" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="UBMODEOFOPERATION" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+                        </MiningAttributes>
+                    </InputMiningData>
+                    <Performance>
+                        <Balanced WeightsTable="ODMR$13_03_03_443630MMSFKPB"/>
+                    </Performance>
+                    <Tuning>
+                        <None/>
+                    </Tuning>
+                    <DecisionTreeAlgo>
+                        <TREE_IMPURITY_METRIC>TREE_IMPURITY_GINI</TREE_IMPURITY_METRIC>
+                        <TREE_TERM_MAX_DEPTH>7</TREE_TERM_MAX_DEPTH>
+                        <TREE_TERM_MINPCT_NODE>0.05</TREE_TERM_MINPCT_NODE>
+                        <TREE_TERM_MINPCT_SPLIT>0.1</TREE_TERM_MINPCT_SPLIT>
+                        <TREE_TERM_MINREC_NODE>10</TREE_TERM_MINREC_NODE>
+                        <TREE_TERM_MINREC_SPLIT>20</TREE_TERM_MINREC_SPLIT>
+                    </DecisionTreeAlgo>
+                </DecisionTreeModel>
+                <CSupportVectorMachineModel Id="10037" Name="CLAS_SVM_3_16" Status="Ready" CreationDate="2018-10-02T13:03:25" Annotation="" UseForOutput="true">
+                    <InputMiningData DataUsage="AUTO" MiningUsage="AUTO">
+                        <MiningAttributes>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="BRANCHCODE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="CLOSUREDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CREDITBASECODE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="CREDITLIMIT" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CURRENCY" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DATEOFDORMANCY" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DATEOPENED" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="DEBITBASECODE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DORMANTDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="INTERESTSTARTDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTCREDITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTDEBITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTTRANSACTIONDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="LOWESTBALANCE" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LOWESTBALANCEDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="OPENEDBYTELLER" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="PRODUCT" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="RECLASTMODIFIEDDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="SMART" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="UBMODEOFOPERATION" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+                        </MiningAttributes>
+                    </InputMiningData>
+                    <Performance>
+                        <Balanced WeightsTable="ODMR$13_03_04_045887GOEETLW"/>
+                    </Performance>
+                    <Tuning>
+                        <None/>
+                    </Tuning>
+                    <CSupportVectorMachineAlgo>
+                        <SVMS_ACTIVE_LEARNING>SVMS_AL_ENABLE</SVMS_ACTIVE_LEARNING>
+                        <SVMS_CONV_TOLERANCE>0.001</SVMS_CONV_TOLERANCE>
+                    </CSupportVectorMachineAlgo>
+                </CSupportVectorMachineModel>
+                <CGeneralizedLinearModel Id="10038" Name="CLAS_GLM_3_16" Status="Ready" CreationDate="2018-10-02T13:03:25" Annotation="" UseForOutput="true">
+                    <InputMiningData DataUsage="AUTO" MiningUsage="AUTO">
+                        <MiningAttributes>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="BRANCHCODE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="CLOSUREDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CREDITBASECODE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="CREDITLIMIT" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CURRENCY" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DATEOFDORMANCY" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DATEOPENED" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="DEBITBASECODE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DORMANTDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="INTERESTSTARTDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTCREDITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTDEBITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTTRANSACTIONDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="LOWESTBALANCE" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LOWESTBALANCEDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="OPENEDBYTELLER" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="PRODUCT" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="RECLASTMODIFIEDDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="SMART" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="UBMODEOFOPERATION" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+                        </MiningAttributes>
+                    </InputMiningData>
+                    <Performance>
+                        <Balanced WeightsTable="ODMR$13_03_04_334933RQRFVMY"/>
+                    </Performance>
+                    <Tuning>
+                        <None/>
+                    </Tuning>
+                    <CGeneralizedLinearAlgo>
+                        <GLMS_CONF_LEVEL>0.95</GLMS_CONF_LEVEL>
+                        <GLMS_FTR_SELECTION>GLMS_FTR_SELECTION_DISABLE</GLMS_FTR_SELECTION>
+                    </CGeneralizedLinearAlgo>
+                </CGeneralizedLinearModel>
+            </Models>
+            <TestSettings>
+                <TopNTargets Value="5"/>
+            </TestSettings>
+            <Results genAccuracyMetrics="true" genConfusionMatrix="true" genROC="true" genLift="true" genTuning="false">
+                <ClassificationResult ModelId="10035" Status="Ready" Name="CLAS_NB_3_16" CreationDate="2018-10-02T13:04:05">
+                    <TestMetrics Name="ODMR$13_03_41_220226XJYVXWC" CreationDate="2018-10-02T13:03:41"/>
+                    <ConfusionMatrix Name="ODMR$13_03_37_775763XJJNTTD" CreationDate="2018-10-02T13:03:41"/>
+                    <Lifts>
+                        <Lift TargetValue="0" Name="ODMR$13_03_41_530864WVEALBS" CreationDate="2018-10-02T13:03:44"/>
+                        <Lift TargetValue="1" Name="ODMR$13_03_44_658747XZFOXGK" CreationDate="2018-10-02T13:03:48"/>
+                    </Lifts>
+                    <ROCs>
+                        <ROC TargetValue="0" Name="ODMR$13_03_48_326890GMJWMSD" CreationDate="2018-10-02T13:03:57"/>
+                        <ROC TargetValue="1" Name="ODMR$13_03_57_699511EXHJVAY" CreationDate="2018-10-02T13:04:05"/>
+                        <AreaUnderCurve Area="0.9999938607215881" TargetValue="0"/>
+                        <AreaUnderCurve Area="0.999995231628418" TargetValue="1"/>
+                    </ROCs>
+                </ClassificationResult>
+                <ClassificationResult ModelId="10038" Status="Ready" Name="CLAS_GLM_3_16" CreationDate="2018-10-02T13:04:08">
+                    <TestMetrics Name="ODMR$13_03_41_542672XILVXQY" CreationDate="2018-10-02T13:03:41"/>
+                    <ConfusionMatrix Name="ODMR$13_03_38_003881KDNAPFK" CreationDate="2018-10-02T13:03:41"/>
+                    <Lifts>
+                        <Lift TargetValue="0" Name="ODMR$13_03_41_814775GNSWECU" CreationDate="2018-10-02T13:03:45"/>
+                        <Lift TargetValue="1" Name="ODMR$13_03_45_431291UZZZSZF" CreationDate="2018-10-02T13:03:49"/>
+                    </Lifts>
+                    <ROCs>
+                        <ROC TargetValue="0" Name="ODMR$13_03_49_560186TSSRFDF" CreationDate="2018-10-02T13:03:59"/>
+                        <ROC TargetValue="1" Name="ODMR$13_03_59_533616OKLMIQD" CreationDate="2018-10-02T13:04:07"/>
+                        <AreaUnderCurve Area="0.9776598215103149" TargetValue="0"/>
+                        <AreaUnderCurve Area="0.977687656879425" TargetValue="1"/>
+                    </ROCs>
+                </ClassificationResult>
+                <ClassificationResult ModelId="10037" Status="Ready" Name="CLAS_SVM_3_16" CreationDate="2018-10-02T13:04:08">
+                    <TestMetrics Name="ODMR$13_03_41_458250WAFDBNY" CreationDate="2018-10-02T13:03:41"/>
+                    <ConfusionMatrix Name="ODMR$13_03_37_874842XAUGIDT" CreationDate="2018-10-02T13:03:41"/>
+                    <Lifts>
+                        <Lift TargetValue="0" Name="ODMR$13_03_41_776622OWHZCFW" CreationDate="2018-10-02T13:03:45"/>
+                        <Lift TargetValue="1" Name="ODMR$13_03_45_373097DYDVNSA" CreationDate="2018-10-02T13:03:49"/>
+                    </Lifts>
+                    <ROCs>
+                        <ROC TargetValue="0" Name="ODMR$13_03_49_387266JFVXTSZ" CreationDate="2018-10-02T13:03:59"/>
+                        <ROC TargetValue="1" Name="ODMR$13_03_59_710418AICRITJ" CreationDate="2018-10-02T13:04:08"/>
+                        <AreaUnderCurve Area="0.9998706579208374" TargetValue="0"/>
+                        <AreaUnderCurve Area="0.9998747706413269" TargetValue="1"/>
+                    </ROCs>
+                </ClassificationResult>
+                <ClassificationResult ModelId="10036" Status="Ready" Name="CLAS_DT_3_16" CreationDate="2018-10-02T13:04:11">
+                    <TestMetrics Name="ODMR$13_03_53_928564IKFMNAN" CreationDate="2018-10-02T13:03:53"/>
+                    <ConfusionMatrix Name="ODMR$13_03_49_417913RERALGP" CreationDate="2018-10-02T13:03:53"/>
+                    <Lifts>
+                        <Lift TargetValue="0" Name="ODMR$13_03_54_383233MBWCPQC" CreationDate="2018-10-02T13:03:56"/>
+                        <Lift TargetValue="1" Name="ODMR$13_03_56_548328TDRBIPJ" CreationDate="2018-10-02T13:03:59"/>
+                    </Lifts>
+                    <ROCs>
+                        <ROC TargetValue="0" Name="ODMR$13_03_59_344777LPMQSXH" CreationDate="2018-10-02T13:04:08"/>
+                        <ROC TargetValue="1" Name="ODMR$13_04_08_456764MHYRCQF" CreationDate="2018-10-02T13:04:11"/>
+                        <AreaUnderCurve Area="0.8039818406105042" TargetValue="0"/>
+                        <AreaUnderCurve Area="0.8039818406105042" TargetValue="1"/>
+                    </ROCs>
+                </ClassificationResult>
+            </Results>
+        </ClassificationBuild>
+        <ClassificationBuild Id="10045" Name="Class Build 3" Status="Complete">
+            <Icon XCOORD="444" YCOORD="218"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <InMemoryColumnar Enable="false">
+                <PriorityLevel>PRIORITY NONE</PriorityLevel>
+                <CompressionMethod>INMEMORY MEMCOMPRESS FOR QUERY LOW</CompressionMethod>
+            </InMemoryColumnar>
+            <BuildDataSource SourceId="10033"/>
+            <CaseAttributes>
+                <Attribute Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+            </CaseAttributes>
+            <MiningAttributes AutoSpec="No">
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="BRANCHCODE" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="CLOSUREDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CREDITBASECODE" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="CREDITLIMIT" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CURRENCY" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DATEOFDORMANCY" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DATEOPENED" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="DEBITBASECODE" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DORMANTDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="INTERESTSTARTDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTCREDITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTDEBITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTTRANSACTIONDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="LOWESTBALANCE" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LOWESTBALANCEDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="OPENEDBYTELLER" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="PRODUCT" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="RECLASTMODIFIEDDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="SMART" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="UBMODEOFOPERATION" DataType="VARCHAR2" Status="Valid"/>
+            </MiningAttributes>
+            <Stoplists>
+                <Stoplist Id="1" Name="Default" Type="Basic" Language="ENGLISH" DBName="">
+                    <StopTokens>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>Mr</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>Mrs</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>Ms</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>a</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>all</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>almost</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>also</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>although</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>an</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>and</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>any</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>are</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>as</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>at</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>be</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>because</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>been</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>both</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>but</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>by</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>can</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>could</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>d</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>did</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>do</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>does</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>either</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>for</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>from</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>had</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>has</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>have</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>having</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>he</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>her</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>here</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>hers</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>him</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>his</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>how</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>however</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>i</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>if</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>in</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>into</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>is</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>it</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>its</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>just</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>ll</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>me</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>might</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>my</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>no</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>non</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>nor</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>not</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>of</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>on</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>one</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>only</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>onto</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>or</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>our</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>ours</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>s</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>shall</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>she</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>should</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>since</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>so</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>some</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>still</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>such</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>t</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>than</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>that</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>the</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>their</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>them</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>then</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>there</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>therefore</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>these</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>they</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>this</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>those</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>though</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>through</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>thus</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>to</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>too</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>until</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>ve</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>very</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>was</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>we</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>were</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>what</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>when</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>where</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>whether</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>which</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>while</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>who</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>whose</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>why</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>will</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>with</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>would</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>yet</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>you</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>your</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>yours</Item>
+                        </Token>
+                    </StopTokens>
+                </Stoplist>
+            </Stoplists>
+            <TextSettings TransformType="Token" CategoricalCutOffValue="200">
+                <Token>
+                    <Token MaxNumberPerDoc="50" MaxNumberAllDocs="3000" Frequency="IDF" StoplistId="1" Policy="">
+                        <Lexer Name="" Type="Basic">
+                            <Settings/>
+                        </Lexer>
+                        <Languages>
+                            <Language Name="ENGLISH" Type="SingleByte"/>
+                        </Languages>
+                    </Token>
+                </Token>
+                <Theme Type="Single">
+                    <Token MaxNumberPerDoc="50" MaxNumberAllDocs="3000" Frequency="IDF" StoplistId="1" Policy="">
+                        <Lexer Type="Basic">
+                            <Settings>
+                                <Attribute Name="index_themes" ValueString="YES" Type="String"/>
+                                <Attribute Name="theme_language" ValueString="ENGLISH" Type="String"/>
+                            </Settings>
+                        </Lexer>
+                        <Languages>
+                            <Language Name="ENGLISH" Type="SingleByte"/>
+                        </Languages>
+                    </Token>
+                </Theme>
+            </TextSettings>
+            <TextAttributes/>
+            <TestDataSource>
+                <SplitData TestPercent="40.0" DataFormat="Table"/>
+            </TestDataSource>
+            <TargetAttribute Name="SMART" DataType="NUMBER" Status="Valid"/>
+            <Models>
+                <NaiveBayesModel Id="10041" Name="CLAS_NB_4_16" Status="Complete" CreationDate="2018-10-02T13:12:39" Annotation="" UseForOutput="true">
+                    <InputMiningData DataUsage="AUTO" MiningUsage="AUTO">
+                        <MiningAttributes>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="BRANCHCODE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="CLOSUREDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CREDITBASECODE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="CREDITLIMIT" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CURRENCY" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DATEOFDORMANCY" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DATEOPENED" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="DEBITBASECODE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DORMANTDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="INTERESTSTARTDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTCREDITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTDEBITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTTRANSACTIONDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="LOWESTBALANCE" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LOWESTBALANCEDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="OPENEDBYTELLER" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="PRODUCT" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="RECLASTMODIFIEDDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="SMART" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="UBMODEOFOPERATION" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+                        </MiningAttributes>
+                    </InputMiningData>
+                    <Performance>
+                        <Balanced WeightsTable="ODMR$13_12_22_902884XKIPXOQ"/>
+                    </Performance>
+                    <Tuning>
+                        <None/>
+                    </Tuning>
+                    <NaiveBayesAlgo>
+                        <NABS_PAIRWISE_THRESHOLD>0.0</NABS_PAIRWISE_THRESHOLD>
+                        <NABS_SINGLETON_THRESHOLD>0.0</NABS_SINGLETON_THRESHOLD>
+                    </NaiveBayesAlgo>
+                </NaiveBayesModel>
+                <DecisionTreeModel Id="10042" Name="CLAS_DT_4_16" Status="Complete" CreationDate="2018-10-02T13:13:02" Annotation="" UseForOutput="true">
+                    <InputMiningData DataUsage="AUTO" MiningUsage="AUTO">
+                        <MiningAttributes>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="BRANCHCODE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="CLOSUREDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CREDITBASECODE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="CREDITLIMIT" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CURRENCY" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DATEOFDORMANCY" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DATEOPENED" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="DEBITBASECODE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DORMANTDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="INTERESTSTARTDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTCREDITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTDEBITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTTRANSACTIONDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="LOWESTBALANCE" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LOWESTBALANCEDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="OPENEDBYTELLER" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="PRODUCT" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="RECLASTMODIFIEDDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="SMART" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="UBMODEOFOPERATION" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+                        </MiningAttributes>
+                    </InputMiningData>
+                    <Performance>
+                        <Balanced WeightsTable="ODMR$13_12_22_548372LWJGZFK"/>
+                    </Performance>
+                    <Tuning>
+                        <None/>
+                    </Tuning>
+                    <DecisionTreeAlgo>
+                        <TREE_IMPURITY_METRIC>TREE_IMPURITY_GINI</TREE_IMPURITY_METRIC>
+                        <TREE_TERM_MAX_DEPTH>7</TREE_TERM_MAX_DEPTH>
+                        <TREE_TERM_MINPCT_NODE>0.05</TREE_TERM_MINPCT_NODE>
+                        <TREE_TERM_MINPCT_SPLIT>0.1</TREE_TERM_MINPCT_SPLIT>
+                        <TREE_TERM_MINREC_NODE>10</TREE_TERM_MINREC_NODE>
+                        <TREE_TERM_MINREC_SPLIT>20</TREE_TERM_MINREC_SPLIT>
+                    </DecisionTreeAlgo>
+                </DecisionTreeModel>
+                <CSupportVectorMachineModel Id="10043" Name="CLAS_SVM_4_16" Status="Complete" CreationDate="2018-10-02T13:12:43" Annotation="" UseForOutput="true">
+                    <InputMiningData DataUsage="AUTO" MiningUsage="AUTO">
+                        <MiningAttributes>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="BRANCHCODE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="CLOSUREDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CREDITBASECODE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="CREDITLIMIT" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CURRENCY" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DATEOFDORMANCY" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DATEOPENED" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="DEBITBASECODE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DORMANTDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="INTERESTSTARTDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTCREDITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTDEBITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTTRANSACTIONDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="LOWESTBALANCE" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LOWESTBALANCEDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="OPENEDBYTELLER" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="PRODUCT" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="RECLASTMODIFIEDDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="SMART" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="UBMODEOFOPERATION" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+                        </MiningAttributes>
+                    </InputMiningData>
+                    <Performance>
+                        <Balanced WeightsTable="ODMR$13_12_23_196910YDBSAJY"/>
+                    </Performance>
+                    <Tuning>
+                        <None/>
+                    </Tuning>
+                    <CSupportVectorMachineAlgo>
+                        <SVMS_ACTIVE_LEARNING>SVMS_AL_ENABLE</SVMS_ACTIVE_LEARNING>
+                        <SVMS_CONV_TOLERANCE>0.001</SVMS_CONV_TOLERANCE>
+                    </CSupportVectorMachineAlgo>
+                </CSupportVectorMachineModel>
+                <CGeneralizedLinearModel Id="10044" Name="CLAS_GLM_4_16" Status="Complete" CreationDate="2018-10-02T13:12:36" Annotation="" UseForOutput="true">
+                    <InputMiningData DataUsage="AUTO" MiningUsage="AUTO">
+                        <MiningAttributes>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="BRANCHCODE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="CLOSUREDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CREDITBASECODE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="CREDITLIMIT" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CURRENCY" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DATEOFDORMANCY" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DATEOPENED" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="DEBITBASECODE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DORMANTDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="INTERESTSTARTDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTCREDITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTDEBITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LASTTRANSACTIONDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="LOWESTBALANCE" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="LOWESTBALANCEDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="OPENEDBYTELLER" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="PRODUCT" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="RECLASTMODIFIEDDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="SMART" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="UBMODEOFOPERATION" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+                        </MiningAttributes>
+                    </InputMiningData>
+                    <Performance>
+                        <Balanced WeightsTable="ODMR$13_12_23_460659NIZNDTT"/>
+                    </Performance>
+                    <Tuning>
+                        <None/>
+                    </Tuning>
+                    <CGeneralizedLinearAlgo>
+                        <GLMS_CONF_LEVEL>0.95</GLMS_CONF_LEVEL>
+                        <GLMS_FTR_SELECTION>GLMS_FTR_SELECTION_DISABLE</GLMS_FTR_SELECTION>
+                    </CGeneralizedLinearAlgo>
+                </CGeneralizedLinearModel>
+            </Models>
+            <TestSettings>
+                <TopNTargets Value="5"/>
+            </TestSettings>
+            <Results genAccuracyMetrics="true" genConfusionMatrix="true" genROC="true" genLift="true" genTuning="false">
+                <ClassificationResult ModelId="10044" Status="Complete" Name="CLAS_GLM_4_16" CreationDate="2018-10-02T13:13:26">
+                    <TestMetrics Name="ODMR$13_12_56_473043IPVYUFQ" CreationDate="2018-10-02T13:12:56"/>
+                    <ConfusionMatrix Name="ODMR$13_12_47_094669AVIPQJR" CreationDate="2018-10-02T13:12:56"/>
+                    <Lifts>
+                        <Lift TargetValue="0" Name="ODMR$13_12_56_778690FRGGAZO" CreationDate="2018-10-02T13:13:02"/>
+                        <Lift TargetValue="1" Name="ODMR$13_13_02_364774KBELRMI" CreationDate="2018-10-02T13:13:06"/>
+                    </Lifts>
+                    <ROCs>
+                        <ROC TargetValue="0" Name="ODMR$13_13_06_351440JKRBGGD" CreationDate="2018-10-02T13:13:17"/>
+                        <ROC TargetValue="1" Name="ODMR$13_13_17_007293MEFXCVD" CreationDate="2018-10-02T13:13:26"/>
+                        <AreaUnderCurve Area="0.9965057373046875" TargetValue="0"/>
+                        <AreaUnderCurve Area="0.9965139031410217" TargetValue="1"/>
+                    </ROCs>
+                </ClassificationResult>
+                <ClassificationResult ModelId="10041" Status="Complete" Name="CLAS_NB_4_16" CreationDate="2018-10-02T13:13:28">
+                    <TestMetrics Name="ODMR$13_12_57_947498ZCXEUPB" CreationDate="2018-10-02T13:12:57"/>
+                    <ConfusionMatrix Name="ODMR$13_12_48_835565TPJGRTM" CreationDate="2018-10-02T13:12:57"/>
+                    <Lifts>
+                        <Lift TargetValue="0" Name="ODMR$13_12_58_366296DIZAOUW" CreationDate="2018-10-02T13:13:03"/>
+                        <Lift TargetValue="1" Name="ODMR$13_13_03_558447PFZATJJ" CreationDate="2018-10-02T13:13:06"/>
+                    </Lifts>
+                    <ROCs>
+                        <ROC TargetValue="0" Name="ODMR$13_13_06_588074CKXDMUA" CreationDate="2018-10-02T13:13:17"/>
+                        <ROC TargetValue="1" Name="ODMR$13_13_17_330467ADRPAQP" CreationDate="2018-10-02T13:13:28"/>
+                        <AreaUnderCurve Area="0.9999763369560242" TargetValue="0"/>
+                        <AreaUnderCurve Area="0.9999802708625793" TargetValue="1"/>
+                    </ROCs>
+                </ClassificationResult>
+                <ClassificationResult ModelId="10043" Status="Complete" Name="CLAS_SVM_4_16" CreationDate="2018-10-02T13:13:31">
+                    <TestMetrics Name="ODMR$13_13_04_942410QELIITN" CreationDate="2018-10-02T13:13:04"/>
+                    <ConfusionMatrix Name="ODMR$13_12_53_230858NQYMJLN" CreationDate="2018-10-02T13:13:04"/>
+                    <Lifts>
+                        <Lift TargetValue="0" Name="ODMR$13_13_05_354697NAIIOIV" CreationDate="2018-10-02T13:13:08"/>
+                        <Lift TargetValue="1" Name="ODMR$13_13_08_506106AABGOUN" CreationDate="2018-10-02T13:13:12"/>
+                    </Lifts>
+                    <ROCs>
+                        <ROC TargetValue="0" Name="ODMR$13_13_12_064478MUIKPVZ" CreationDate="2018-10-02T13:13:24"/>
+                        <ROC TargetValue="1" Name="ODMR$13_13_24_700726FFYIJDA" CreationDate="2018-10-02T13:13:31"/>
+                        <AreaUnderCurve Area="1.0" TargetValue="0"/>
+                        <AreaUnderCurve Area="1.0" TargetValue="1"/>
+                    </ROCs>
+                </ClassificationResult>
+                <ClassificationResult ModelId="10042" Status="Complete" Name="CLAS_DT_4_16" CreationDate="2018-10-02T13:13:36">
+                    <TestMetrics Name="ODMR$13_13_19_774427LPGHTOA" CreationDate="2018-10-02T13:13:19"/>
+                    <ConfusionMatrix Name="ODMR$13_13_11_979215BMBAEEK" CreationDate="2018-10-02T13:13:19"/>
+                    <Lifts>
+                        <Lift TargetValue="0" Name="ODMR$13_13_20_503751NOPEMNY" CreationDate="2018-10-02T13:13:23"/>
+                        <Lift TargetValue="1" Name="ODMR$13_13_23_683159UGXWIGU" CreationDate="2018-10-02T13:13:28"/>
+                    </Lifts>
+                    <ROCs>
+                        <ROC TargetValue="0" Name="ODMR$13_13_28_300827DRMNQWQ" CreationDate="2018-10-02T13:13:32"/>
+                        <ROC TargetValue="1" Name="ODMR$13_13_32_420699YSJOVFC" CreationDate="2018-10-02T13:13:36"/>
+                        <AreaUnderCurve Area="0.9999498724937439" TargetValue="0"/>
+                        <AreaUnderCurve Area="0.9999498724937439" TargetValue="1"/>
+                    </ROCs>
+                </ClassificationResult>
+            </Results>
+        </ClassificationBuild>
+        <ClassificationBuild Id="10060" Name="Class Build 4" Status="Complete">
+            <Icon XCOORD="436" YCOORD="364"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <InMemoryColumnar Enable="false">
+                <PriorityLevel>PRIORITY NONE</PriorityLevel>
+                <CompressionMethod>INMEMORY MEMCOMPRESS FOR QUERY LOW</CompressionMethod>
+            </InMemoryColumnar>
+            <BuildDataSource SourceId="10054"/>
+            <CaseAttributes/>
+            <MiningAttributes AutoSpec="Yes">
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="DATECREATED" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="SMART" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="UBRELATIONSHIPMGRID" DataType="VARCHAR2" Status="Valid"/>
+            </MiningAttributes>
+            <Stoplists>
+                <Stoplist Id="1" Name="Default" Type="Basic" Language="ENGLISH" DBName="">
+                    <StopTokens>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>Mr</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>Mrs</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>Ms</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>a</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>all</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>almost</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>also</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>although</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>an</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>and</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>any</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>are</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>as</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>at</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>be</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>because</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>been</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>both</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>but</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>by</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>can</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>could</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>d</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>did</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>do</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>does</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>either</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>for</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>from</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>had</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>has</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>have</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>having</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>he</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>her</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>here</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>hers</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>him</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>his</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>how</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>however</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>i</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>if</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>in</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>into</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>is</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>it</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>its</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>just</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>ll</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>me</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>might</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>my</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>no</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>non</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>nor</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>not</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>of</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>on</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>one</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>only</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>onto</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>or</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>our</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>ours</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>s</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>shall</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>she</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>should</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>since</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>so</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>some</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>still</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>such</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>t</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>than</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>that</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>the</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>their</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>them</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>then</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>there</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>therefore</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>these</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>they</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>this</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>those</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>though</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>through</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>thus</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>to</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>too</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>until</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>ve</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>very</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>was</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>we</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>were</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>what</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>when</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>where</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>whether</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>which</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>while</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>who</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>whose</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>why</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>will</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>with</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>would</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>yet</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>you</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>your</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>yours</Item>
+                        </Token>
+                    </StopTokens>
+                </Stoplist>
+            </Stoplists>
+            <TextSettings TransformType="Token" CategoricalCutOffValue="200">
+                <Token>
+                    <Token MaxNumberPerDoc="50" MaxNumberAllDocs="3000" Frequency="IDF" StoplistId="1" Policy="">
+                        <Lexer Name="" Type="Basic">
+                            <Settings/>
+                        </Lexer>
+                        <Languages>
+                            <Language Name="ENGLISH" Type="SingleByte"/>
+                        </Languages>
+                    </Token>
+                </Token>
+                <Theme Type="Single">
+                    <Token MaxNumberPerDoc="50" MaxNumberAllDocs="3000" Frequency="IDF" StoplistId="1" Policy="">
+                        <Lexer Type="Basic">
+                            <Settings>
+                                <Attribute Name="index_themes" ValueString="YES" Type="String"/>
+                                <Attribute Name="theme_language" ValueString="ENGLISH" Type="String"/>
+                            </Settings>
+                        </Lexer>
+                        <Languages>
+                            <Language Name="ENGLISH" Type="SingleByte"/>
+                        </Languages>
+                    </Token>
+                </Theme>
+            </TextSettings>
+            <TextAttributes/>
+            <HeuristicSummaryResult StatisticTable="ODMR$13_58_03_225028SCXFDAI">
+                <Attribute Name="DATECREATED">
+                    <Reason Type="INPUT_NONE"/>
+                </Attribute>
+            </HeuristicSummaryResult>
+            <TestDataSource>
+                <SplitData TestPercent="40.0" DataFormat="Table"/>
+            </TestDataSource>
+            <TargetAttribute Name="SMART" DataType="NUMBER" Status="Valid"/>
+            <Models>
+                <NaiveBayesModel Id="10056" Name="CLAS_NB_5_16" Status="Complete" CreationDate="2018-10-02T13:58:41" Annotation="" UseForOutput="true">
+                    <InputMiningData DataUsage="AUTO" MiningUsage="AUTO">
+                        <MiningAttributes>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="DATECREATED" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="SMART" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="UBRELATIONSHIPMGRID" DataType="VARCHAR2" Status="Valid"/>
+                        </MiningAttributes>
+                        <HeuristicResult StatisticTable="ODMR$13_58_03_225028SCXFDAI">
+                            <Attribute Name="DATECREATED">
+                                <Reason Type="CAT_UNIQUE_COUNT_LIMIT"/>
+                            </Attribute>
+                        </HeuristicResult>
+                    </InputMiningData>
+                    <Performance>
+                        <Balanced WeightsTable="ODMR$13_58_27_416576PUFDNAP"/>
+                    </Performance>
+                    <Tuning>
+                        <None/>
+                    </Tuning>
+                    <NaiveBayesAlgo>
+                        <NABS_PAIRWISE_THRESHOLD>0.0</NABS_PAIRWISE_THRESHOLD>
+                        <NABS_SINGLETON_THRESHOLD>0.0</NABS_SINGLETON_THRESHOLD>
+                    </NaiveBayesAlgo>
+                </NaiveBayesModel>
+                <DecisionTreeModel Id="10057" Name="CLAS_DT_5_16" Status="Complete" CreationDate="2018-10-02T13:58:41" Annotation="" UseForOutput="true">
+                    <InputMiningData DataUsage="AUTO" MiningUsage="AUTO">
+                        <MiningAttributes>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="DATECREATED" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="SMART" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="UBRELATIONSHIPMGRID" DataType="VARCHAR2" Status="Valid"/>
+                        </MiningAttributes>
+                        <HeuristicResult StatisticTable="ODMR$13_58_03_225028SCXFDAI">
+                            <Attribute Name="DATECREATED">
+                                <Reason Type="CAT_UNIQUE_COUNT_LIMIT"/>
+                            </Attribute>
+                        </HeuristicResult>
+                    </InputMiningData>
+                    <Performance>
+                        <Balanced WeightsTable="ODMR$13_58_27_150118BSYUSQT"/>
+                    </Performance>
+                    <Tuning>
+                        <None/>
+                    </Tuning>
+                    <DecisionTreeAlgo>
+                        <TREE_IMPURITY_METRIC>TREE_IMPURITY_GINI</TREE_IMPURITY_METRIC>
+                        <TREE_TERM_MAX_DEPTH>7</TREE_TERM_MAX_DEPTH>
+                        <TREE_TERM_MINPCT_NODE>0.05</TREE_TERM_MINPCT_NODE>
+                        <TREE_TERM_MINPCT_SPLIT>0.1</TREE_TERM_MINPCT_SPLIT>
+                        <TREE_TERM_MINREC_NODE>10</TREE_TERM_MINREC_NODE>
+                        <TREE_TERM_MINREC_SPLIT>20</TREE_TERM_MINREC_SPLIT>
+                    </DecisionTreeAlgo>
+                </DecisionTreeModel>
+                <CSupportVectorMachineModel Id="10058" Name="CLAS_SVM_5_16" Status="Complete" CreationDate="2018-10-02T13:58:41" Annotation="" UseForOutput="true">
+                    <InputMiningData DataUsage="AUTO" MiningUsage="AUTO">
+                        <MiningAttributes>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="DATECREATED" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="SMART" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="UBRELATIONSHIPMGRID" DataType="VARCHAR2" Status="Valid"/>
+                        </MiningAttributes>
+                        <HeuristicResult StatisticTable="ODMR$13_58_03_225028SCXFDAI">
+                            <Attribute Name="DATECREATED">
+                                <Reason Type="CAT_UNIQUE_COUNT_LIMIT"/>
+                            </Attribute>
+                        </HeuristicResult>
+                    </InputMiningData>
+                    <Performance>
+                        <Balanced WeightsTable="ODMR$13_58_27_657688YOJWXKJ"/>
+                    </Performance>
+                    <Tuning>
+                        <None/>
+                    </Tuning>
+                    <CSupportVectorMachineAlgo>
+                        <SVMS_ACTIVE_LEARNING>SVMS_AL_ENABLE</SVMS_ACTIVE_LEARNING>
+                        <SVMS_CONV_TOLERANCE>0.001</SVMS_CONV_TOLERANCE>
+                    </CSupportVectorMachineAlgo>
+                </CSupportVectorMachineModel>
+                <CGeneralizedLinearModel Id="10059" Name="CLAS_GLM_5_16" Status="Complete" CreationDate="2018-10-02T13:58:41" Annotation="" UseForOutput="true">
+                    <InputMiningData DataUsage="AUTO" MiningUsage="AUTO">
+                        <MiningAttributes>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="DATECREATED" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="SMART" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="UBRELATIONSHIPMGRID" DataType="VARCHAR2" Status="Valid"/>
+                        </MiningAttributes>
+                        <HeuristicResult StatisticTable="ODMR$13_58_03_225028SCXFDAI">
+                            <Attribute Name="DATECREATED">
+                                <Reason Type="CAT_UNIQUE_COUNT_LIMIT"/>
+                            </Attribute>
+                        </HeuristicResult>
+                    </InputMiningData>
+                    <Performance>
+                        <Balanced WeightsTable="ODMR$13_58_27_869570HJYYXHY"/>
+                    </Performance>
+                    <Tuning>
+                        <None/>
+                    </Tuning>
+                    <CGeneralizedLinearAlgo>
+                        <GLMS_CONF_LEVEL>0.95</GLMS_CONF_LEVEL>
+                        <GLMS_FTR_SELECTION>GLMS_FTR_SELECTION_DISABLE</GLMS_FTR_SELECTION>
+                    </CGeneralizedLinearAlgo>
+                </CGeneralizedLinearModel>
+            </Models>
+            <TestSettings>
+                <TopNTargets Value="5"/>
+            </TestSettings>
+            <Results genAccuracyMetrics="true" genConfusionMatrix="true" genROC="true" genLift="true" genTuning="false">
+                <ClassificationResult ModelId="10056" Status="Complete" Name="CLAS_NB_5_16" CreationDate="2018-10-02T13:59:18">
+                    <TestMetrics Name="ODMR$13_58_58_260405MSGBVFU" CreationDate="2018-10-02T13:58:58"/>
+                    <ConfusionMatrix Name="ODMR$13_58_54_464148HCTDRLN" CreationDate="2018-10-02T13:58:58"/>
+                    <Lifts>
+                        <Lift TargetValue="0" Name="ODMR$13_58_58_471066QZVLKAL" CreationDate="2018-10-02T13:59:01"/>
+                        <Lift TargetValue="1" Name="ODMR$13_59_01_022878BBCMSDC" CreationDate="2018-10-02T13:59:03"/>
+                    </Lifts>
+                    <ROCs>
+                        <ROC TargetValue="0" Name="ODMR$13_59_03_789940OWIVGHR" CreationDate="2018-10-02T13:59:11"/>
+                        <ROC TargetValue="1" Name="ODMR$13_59_11_507088KIONLAZ" CreationDate="2018-10-02T13:59:18"/>
+                        <AreaUnderCurve Area="0.6306486129760742" TargetValue="0"/>
+                        <AreaUnderCurve Area="0.6306486129760742" TargetValue="1"/>
+                    </ROCs>
+                </ClassificationResult>
+                <ClassificationResult ModelId="10059" Status="Complete" Name="CLAS_GLM_5_16" CreationDate="2018-10-02T13:59:18">
+                    <TestMetrics Name="ODMR$13_58_58_160549JNKLFMT" CreationDate="2018-10-02T13:58:58"/>
+                    <ConfusionMatrix Name="ODMR$13_58_54_188903YWWNXQO" CreationDate="2018-10-02T13:58:58"/>
+                    <Lifts>
+                        <Lift TargetValue="0" Name="ODMR$13_58_58_418015TLCEIMN" CreationDate="2018-10-02T13:59:01"/>
+                        <Lift TargetValue="1" Name="ODMR$13_59_01_012346LKYBITE" CreationDate="2018-10-02T13:59:03"/>
+                    </Lifts>
+                    <ROCs>
+                        <ROC TargetValue="0" Name="ODMR$13_59_03_560797TUEIDDE" CreationDate="2018-10-02T13:59:11"/>
+                        <ROC TargetValue="1" Name="ODMR$13_59_11_127465SBUOBTZ" CreationDate="2018-10-02T13:59:18"/>
+                        <AreaUnderCurve Area="0.6306456923484802" TargetValue="0"/>
+                        <AreaUnderCurve Area="0.6306456923484802" TargetValue="1"/>
+                    </ROCs>
+                </ClassificationResult>
+                <ClassificationResult ModelId="10057" Status="Complete" Name="CLAS_DT_5_16" CreationDate="2018-10-02T13:59:19">
+                    <TestMetrics Name="ODMR$13_58_58_886269VFRHGOW" CreationDate="2018-10-02T13:58:58"/>
+                    <ConfusionMatrix Name="ODMR$13_58_55_805598USMWMXJ" CreationDate="2018-10-02T13:58:58"/>
+                    <Lifts>
+                        <Lift TargetValue="0" Name="ODMR$13_58_59_320672XDRPIKK" CreationDate="2018-10-02T13:59:01"/>
+                        <Lift TargetValue="1" Name="ODMR$13_59_01_591804PMXCWST" CreationDate="2018-10-02T13:59:03"/>
+                    </Lifts>
+                    <ROCs>
+                        <ROC TargetValue="0" Name="ODMR$13_59_03_939196ZCOFDCI" CreationDate="2018-10-02T13:59:12"/>
+                        <ROC TargetValue="1" Name="ODMR$13_59_12_201207NJMETSR" CreationDate="2018-10-02T13:59:19"/>
+                        <AreaUnderCurve Area="0.6306486129760742" TargetValue="0"/>
+                        <AreaUnderCurve Area="0.6306486129760742" TargetValue="1"/>
+                    </ROCs>
+                </ClassificationResult>
+                <ClassificationResult ModelId="10058" Status="Complete" Name="CLAS_SVM_5_16" CreationDate="2018-10-02T13:59:20">
+                    <TestMetrics Name="ODMR$13_59_01_023330TFGOECQ" CreationDate="2018-10-02T13:59:01"/>
+                    <ConfusionMatrix Name="ODMR$13_58_57_602202QLNKJOC" CreationDate="2018-10-02T13:59:01"/>
+                    <Lifts>
+                        <Lift TargetValue="0" Name="ODMR$13_59_01_299348VKNMRJT" CreationDate="2018-10-02T13:59:03"/>
+                        <Lift TargetValue="1" Name="ODMR$13_59_03_788550JQFHBCR" CreationDate="2018-10-02T13:59:06"/>
+                    </Lifts>
+                    <ROCs>
+                        <ROC TargetValue="0" Name="ODMR$13_59_06_042291XICYCPU" CreationDate="2018-10-02T13:59:14"/>
+                        <ROC TargetValue="1" Name="ODMR$13_59_14_320490GMMSDOT" CreationDate="2018-10-02T13:59:20"/>
+                        <AreaUnderCurve Area="0.6306515336036682" TargetValue="0"/>
+                        <AreaUnderCurve Area="0.6306515336036682" TargetValue="1"/>
+                    </ROCs>
+                </ClassificationResult>
+            </Results>
+        </ClassificationBuild>
+    </Nodes>
+    <Links>
+        <Link Id="10032" From="10022" To="10031" Name="Link" Label="From &quot;ACCOUNT&quot; to &quot;Transform 1&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10034" From="10031" To="10033" Name="Link" Label="From &quot;Transform 1&quot; to &quot;Filter Columns 1&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10040" From="10033" To="10039" Name="Link" Label="From &quot;Filter Columns 1&quot; to &quot;Class Build 2&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10046" From="10033" To="10045" Name="Link" Label="From &quot;Filter Columns 1&quot; to &quot;Class Build 3&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10051" From="10048" To="10049" Name="Link" Label="From &quot;CUSTOMER&quot; to &quot;Join&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10053" From="10031" To="10049" Name="Link" Label="From &quot;Transform 1&quot; to &quot;Join&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10055" From="10049" To="10054" Name="Link" Label="From &quot;Join&quot; to &quot;Filter Columns 2&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10061" From="10054" To="10060" Name="Link" Label="From &quot;Filter Columns 2&quot; to &quot;Class Build 4&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10068" From="10049" To="10067" Name="Link" Label="From &quot;Join&quot; to &quot;Filter Columns 3&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+    </Links>
+</WorkflowProcess>
