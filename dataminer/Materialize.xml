@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<WorkflowProcess Version="12.2.0.0.1" DBVersion="12.1.0.2.0" Schema="" xmlns="http://xmlns.oracle.com/odmr11">
+    <Nodes>
+        <DataSource Id="10002" Name="ACCOUNT" Status="Complete">
+            <Icon XCOORD="350" YCOORD="210"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <InMemoryColumnar Enable="false">
+                <PriorityLevel>PRIORITY NONE</PriorityLevel>
+                <CompressionMethod>INMEMORY MEMCOMPRESS FOR QUERY LOW</CompressionMethod>
+            </InMemoryColumnar>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10002" as (select "ACCOUNT"."CUSTOMERCODE", 
+"ACCOUNT"."CLOSED", 
+"ACCOUNT"."DATEOFDORMANCY", 
+"ACCOUNT"."LASTCREDITTRANSDTTM", 
+"ACCOUNT"."DEBITBASECODE", 
+"ACCOUNT"."STATUS", 
+"ACCOUNT"."DORMANTSTATUS", 
+"ACCOUNT"."OPENEDBYTELLER", 
+"ACCOUNT"."PRODUCT", 
+"ACCOUNT"."BRANCHCODE", 
+"ACCOUNT"."ACCOUNTID", 
+"ACCOUNT"."CLOSUREDATE", 
+"ACCOUNT"."UBMODEOFOPERATION", 
+"ACCOUNT"."ENROLLMENTCODE", 
+"ACCOUNT"."DEBITLIMIT", 
+"ACCOUNT"."RECLASTMODIFIEDDATE", 
+"ACCOUNT"."CURRENCY", 
+"ACCOUNT"."LASTTRANSACTIONDATE", 
+"ACCOUNT"."LOWESTBALANCE", 
+"ACCOUNT"."CREDITBASECODE", 
+"ACCOUNT"."CREDITLIMIT", 
+"ACCOUNT"."DORMANTDATE", 
+"ACCOUNT"."LOANPRINCIPALAMOUNT", 
+"ACCOUNT"."INTERESTSTARTDATE", 
+"ACCOUNT"."LOWESTBALANCEDATE", 
+"ACCOUNT"."SEGMENTATION", 
+"ACCOUNT"."LASTDEBITTRANSDTTM", 
+"ACCOUNT"."DATEOPENED" 
+from "DEMO"."ACCOUNT"  )</SQLExpression>
+            <Attributes>
+                <Attribute Name="CUSTOMERCODE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CLOSED" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="DATEOFDORMANCY" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute Name="LASTCREDITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute Name="DEBITBASECODE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="STATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="DORMANTSTATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="OPENEDBYTELLER" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="PRODUCT" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="BRANCHCODE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CLOSUREDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute Name="UBMODEOFOPERATION" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="ENROLLMENTCODE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="DEBITLIMIT" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="RECLASTMODIFIEDDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute Name="CURRENCY" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="LASTTRANSACTIONDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute Name="LOWESTBALANCE" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CREDITBASECODE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CREDITLIMIT" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="DORMANTDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute Name="LOANPRINCIPALAMOUNT" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="INTERESTSTARTDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute Name="LOWESTBALANCEDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute Name="SEGMENTATION" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="LASTDEBITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute Name="DATEOPENED" DataType="TIMESTAMP(6)" Status="Valid"/>
+            </Attributes>
+            <SourceTable Schema="" Name="ACCOUNT" Synonym="false"/>
+            <JSONColumns/>
+            <DataGuideSettings Generate="true" UseFullData="false" UseFullDoc="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <NumberOfValues>10000</NumberOfValues>
+            </DataGuideSettings>
+        </DataSource>
+        <DataSource Id="10004" Name="CUSTOMER" Status="Complete">
+            <Icon XCOORD="350" YCOORD="329"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <InMemoryColumnar Enable="false">
+                <PriorityLevel>PRIORITY NONE</PriorityLevel>
+                <CompressionMethod>INMEMORY MEMCOMPRESS FOR QUERY LOW</CompressionMethod>
+            </InMemoryColumnar>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10004" as (select "CUSTOMER"."CUSTOMERCODE", 
+"CUSTOMER"."SHORTNAME", 
+"CUSTOMER"."FIRSTNAME", 
+"CUSTOMER"."UBRELATIONSHIPMGRID", 
+"CUSTOMER"."SUBCATEGORY", 
+"CUSTOMER"."CUSTOMERTYPE", 
+"CUSTOMER"."KYCSTATUS", 
+"CUSTOMER"."NRCNO", 
+"CUSTOMER"."CUSTOMERSUBTYPE", 
+"CUSTOMER"."LASTNAME", 
+"CUSTOMER"."DATEMODIFIED", 
+"CUSTOMER"."DOB", 
+"CUSTOMER"."SEGMENTATION", 
+"CUSTOMER"."GENDER", 
+"CUSTOMER"."ADDRESSLINE3", 
+"CUSTOMER"."ADDRESSLINE2", 
+"CUSTOMER"."ADDRESSLINE5", 
+"CUSTOMER"."ADDRESSLINE4", 
+"CUSTOMER"."BLACKLISTED", 
+"CUSTOMER"."DATECREATED" 
+from "DEMO"."CUSTOMER"  )</SQLExpression>
+            <Attributes>
+                <Attribute Name="CUSTOMERCODE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="SHORTNAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="FIRSTNAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="UBRELATIONSHIPMGRID" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="SUBCATEGORY" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUSTOMERTYPE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="KYCSTATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="NRCNO" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUSTOMERSUBTYPE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="LASTNAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="DATEMODIFIED" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="DOB" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="SEGMENTATION" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="GENDER" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="ADDRESSLINE3" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="ADDRESSLINE2" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="ADDRESSLINE5" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="ADDRESSLINE4" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="BLACKLISTED" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="DATECREATED" DataType="VARCHAR2" Status="Valid"/>
+            </Attributes>
+            <SourceTable Schema="" Name="CUSTOMER" Synonym="false"/>
+            <JSONColumns/>
+            <DataGuideSettings Generate="true" UseFullData="false" UseFullDoc="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <NumberOfValues>10000</NumberOfValues>
+            </DataGuideSettings>
+        </DataSource>
+        <CreateTable TableName="ACCOUNT_DB" Table="true" AutoSpec="Yes" Id="10001" Name="ACCOUNT_DB" Status="Complete">
+            <Icon XCOORD="564" YCOORD="208"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <InMemoryColumnar Enable="false">
+                <PriorityLevel>PRIORITY NONE</PriorityLevel>
+                <CompressionMethod>INMEMORY MEMCOMPRESS FOR QUERY LOW</CompressionMethod>
+            </InMemoryColumnar>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10001" AS ( SELECT  "CUSTOMERCODE" ,
+ "CLOSED" ,
+ "DATEOFDORMANCY" ,
+ "LASTCREDITTRANSDTTM" ,
+ "DEBITBASECODE" ,
+ "STATUS" ,
+ "DORMANTSTATUS" ,
+ "OPENEDBYTELLER" ,
+ "PRODUCT" ,
+ "BRANCHCODE" ,
+ "ACCOUNTID" ,
+ "CLOSUREDATE" ,
+ "UBMODEOFOPERATION" ,
+ "ENROLLMENTCODE" ,
+ "DEBITLIMIT" ,
+ "RECLASTMODIFIEDDATE" ,
+ "CURRENCY" ,
+ "LASTTRANSACTIONDATE" ,
+ "LOWESTBALANCE" ,
+ "CREDITBASECODE" ,
+ "CREDITLIMIT" ,
+ "DORMANTDATE" ,
+ "LOANPRINCIPALAMOUNT" ,
+ "INTERESTSTARTDATE" ,
+ "LOWESTBALANCEDATE" ,
+ "SEGMENTATION" ,
+ "LASTDEBITTRANSDTTM" ,
+ "DATEOPENED"  FROM "ACCOUNT_DB")</SQLExpression>
+            <DBAttributes>
+                <DBAttribute Key="No" Index="No" Name="CUSTOMERCODE" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CLOSED" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="DATEOFDORMANCY" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="LASTCREDITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="DEBITBASECODE" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="STATUS" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="DORMANTSTATUS" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="OPENEDBYTELLER" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="PRODUCT" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="BRANCHCODE" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CLOSUREDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="UBMODEOFOPERATION" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="ENROLLMENTCODE" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="DEBITLIMIT" DataType="NUMBER" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="RECLASTMODIFIEDDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CURRENCY" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="LASTTRANSACTIONDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="LOWESTBALANCE" DataType="NUMBER" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CREDITBASECODE" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CREDITLIMIT" DataType="NUMBER" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="DORMANTDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="LOANPRINCIPALAMOUNT" DataType="NUMBER" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="INTERESTSTARTDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="LOWESTBALANCEDATE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="SEGMENTATION" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="LASTDEBITTRANSDTTM" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="DATEOPENED" DataType="TIMESTAMP(6)" Status="Valid"/>
+            </DBAttributes>
+            <JSONColumns/>
+            <CreateTableOptions>
+                <Logging>NOLOGGING</Logging>
+                <TableCompression>ROW STORE COMPRESS</TableCompression>
+            </CreateTableOptions>
+        </CreateTable>
+        <CreateTable TableName="CUSTOMER_DB" Table="true" AutoSpec="Yes" Id="10005" Name="CUSTOMER_DB" Status="Complete">
+            <Icon XCOORD="560" YCOORD="329"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <InMemoryColumnar Enable="false">
+                <PriorityLevel>PRIORITY NONE</PriorityLevel>
+                <CompressionMethod>INMEMORY MEMCOMPRESS FOR QUERY LOW</CompressionMethod>
+            </InMemoryColumnar>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10005" AS ( SELECT  "CUSTOMERCODE" ,
+ "SHORTNAME" ,
+ "FIRSTNAME" ,
+ "UBRELATIONSHIPMGRID" ,
+ "SUBCATEGORY" ,
+ "CUSTOMERTYPE" ,
+ "KYCSTATUS" ,
+ "NRCNO" ,
+ "CUSTOMERSUBTYPE" ,
+ "LASTNAME" ,
+ "DATEMODIFIED" ,
+ "DOB" ,
+ "SEGMENTATION" ,
+ "GENDER" ,
+ "ADDRESSLINE3" ,
+ "ADDRESSLINE2" ,
+ "ADDRESSLINE5" ,
+ "ADDRESSLINE4" ,
+ "BLACKLISTED" ,
+ "DATECREATED"  FROM "CUSTOMER_DB")</SQLExpression>
+            <DBAttributes>
+                <DBAttribute Key="No" Index="No" Name="CUSTOMERCODE" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="SHORTNAME" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="FIRSTNAME" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="UBRELATIONSHIPMGRID" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="SUBCATEGORY" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUSTOMERTYPE" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="KYCSTATUS" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="NRCNO" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUSTOMERSUBTYPE" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="LASTNAME" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="DATEMODIFIED" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="DOB" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="SEGMENTATION" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="GENDER" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="ADDRESSLINE3" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="ADDRESSLINE2" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="ADDRESSLINE5" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="ADDRESSLINE4" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="BLACKLISTED" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="DATECREATED" DataType="VARCHAR2" Status="Valid"/>
+            </DBAttributes>
+            <JSONColumns/>
+            <CreateTableOptions>
+                <Logging>NOLOGGING</Logging>
+                <TableCompression>ROW STORE COMPRESS</TableCompression>
+            </CreateTableOptions>
+        </CreateTable>
+    </Nodes>
+    <Links>
+        <Link Id="10003" From="10002" To="10001" Name="Link" Label="From &quot;ACCOUNT&quot; to &quot;ACCOUNT_DB&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10006" From="10004" To="10005" Name="Link" Label="From &quot;CUSTOMER&quot; to &quot;CUSTOMER_DB&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+    </Links>
+</WorkflowProcess>

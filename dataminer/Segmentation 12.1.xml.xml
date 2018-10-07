@@ -1,0 +1,1395 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<WorkflowProcess Version="12.2.0.0.1" DBVersion="12.1.0.2.0" Schema="" xmlns="http://xmlns.oracle.com/odmr11">
+    <Nodes>
+        <DataSource Id="10001" Name="IMPOTANT_ATTR" Status="Complete">
+            <Icon XCOORD="207" YCOORD="244"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <InMemoryColumnar Enable="false">
+                <PriorityLevel>PRIORITY NONE</PriorityLevel>
+                <CompressionMethod>INMEMORY MEMCOMPRESS FOR QUERY LOW</CompressionMethod>
+            </InMemoryColumnar>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10001" as (select "IMPOTANT_ATTR"."CURRENCY", 
+"IMPOTANT_ATTR"."AMOUNTCREDIT_AVG", 
+"IMPOTANT_ATTR"."LOWESTBALANCE", 
+"IMPOTANT_ATTR"."SEGMENTATION1", 
+"IMPOTANT_ATTR"."ACCOUNTID_COUNT", 
+"IMPOTANT_ATTR"."CUSTOMERTYPE", 
+"IMPOTANT_ATTR"."CREDITLIMIT", 
+"IMPOTANT_ATTR"."AMOUNTDEBIT_AVG", 
+"IMPOTANT_ATTR"."DATEOFBALANCE", 
+"IMPOTANT_ATTR"."OPENEDBYTELLER", 
+"IMPOTANT_ATTR"."ACCOUNTID", 
+"IMPOTANT_ATTR"."GENDER", 
+"IMPOTANT_ATTR"."CLOSINGBALANCE", 
+"IMPOTANT_ATTR"."SMART", 
+"IMPOTANT_ATTR"."UBMODEOFOPERATION" 
+from "DEMO"."IMPOTANT_ATTR"  )</SQLExpression>
+            <Attributes>
+                <Attribute Name="CURRENCY" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="AMOUNTCREDIT_AVG" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="LOWESTBALANCE" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="SEGMENTATION1" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="ACCOUNTID_COUNT" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUSTOMERTYPE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CREDITLIMIT" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="AMOUNTDEBIT_AVG" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="DATEOFBALANCE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute Name="OPENEDBYTELLER" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="GENDER" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CLOSINGBALANCE" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="SMART" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="UBMODEOFOPERATION" DataType="VARCHAR2" Status="Valid"/>
+            </Attributes>
+            <SourceTable Schema="" Name="IMPOTANT_ATTR" Synonym="false"/>
+            <JSONColumns/>
+            <DataGuideSettings Generate="true" UseFullData="false" UseFullDoc="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <NumberOfValues>10000</NumberOfValues>
+            </DataGuideSettings>
+        </DataSource>
+        <CreateTable TableName="OUTPUT_2_17" Table="true" Id="10027" Name="OUTPUT_2_17" Status="Complete">
+            <Icon XCOORD="981" YCOORD="42"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <InMemoryColumnar Enable="false">
+                <PriorityLevel>PRIORITY NONE</PriorityLevel>
+                <CompressionMethod>INMEMORY MEMCOMPRESS FOR QUERY LOW</CompressionMethod>
+            </InMemoryColumnar>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10027" AS ( SELECT  "FEAT_PCA_2_17_FVAL" ,
+ "FEAT_PCA_2_17_FSET" ,
+ "ACCOUNTID"  FROM "OUTPUT_2_17")</SQLExpression>
+            <DBAttributes>
+                <DBAttribute Key="No" Index="No" Name="FEAT_PCA_2_17_FVAL" DataType="BINARY_DOUBLE" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="FEAT_PCA_2_17_FSET" DataType="ODMR_FEATURE_SET_NUMVD" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+            </DBAttributes>
+            <JSONColumns/>
+            <DataGuideSettings Generate="true" UseFullData="false" UseFullDoc="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <NumberOfValues>10000</NumberOfValues>
+            </DataGuideSettings>
+            <CreateTableOptions>
+                <Logging>NOLOGGING</Logging>
+                <TableCompression>ROW STORE COMPRESS</TableCompression>
+            </CreateTableOptions>
+        </CreateTable>
+        <Join UseCartesian="false" Id="10022" Name="Join" Status="Ready">
+            <Icon XCOORD="940" YCOORD="256"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <InMemoryColumnar Enable="false">
+                <PriorityLevel>PRIORITY NONE</PriorityLevel>
+                <CompressionMethod>INMEMORY MEMCOMPRESS FOR QUERY LOW</CompressionMethod>
+            </InMemoryColumnar>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10022" as (SELECT 
+"Apply"."FEAT_PCA_2_17_FVAL"
+, "Apply"."FEAT_PCA_2_17_FSET"
+, "Apply"."ACCOUNTID"
+, "Apply 1"."CLUS_KM_1_17_CLID"
+, "Apply 1"."CLUS_KM_1_17_PROB"
+, "Apply 1"."CLUS_OC_1_17_CLID"
+, "Apply 1"."CLUS_OC_1_17_PROB"
+, "Apply 1"."CURRENCY"
+, "Apply 1"."AMOUNTCREDIT_AVG"
+, "Apply 1"."LOWESTBALANCE"
+, "Apply 1"."SEGMENTATION1"
+, "Apply 1"."ACCOUNTID_COUNT"
+, "Apply 1"."CUSTOMERTYPE"
+, "Apply 1"."CREDITLIMIT"
+, "Apply 1"."AMOUNTDEBIT_AVG"
+, "Apply 1"."DATEOFBALANCE"
+, "Apply 1"."OPENEDBYTELLER"
+, "Apply 1"."ACCOUNTID" "ACCOUNTID1"
+, "Apply 1"."GENDER"
+, "Apply 1"."CLOSINGBALANCE"
+, "Apply 1"."SMART"
+, "Apply 1"."UBMODEOFOPERATION"
+
+FROM
+{INPUT_SOURCE:10014} "Apply"
+INNER JOIN {INPUT_SOURCE:10017} "Apply 1"
+ON "Apply"."ACCOUNTID" = "Apply 1"."ACCOUNTID"
+
+ )</SQLExpression>
+            <KeyColumns AutoSpec="No">
+                <JoinColumn Type="Inner">
+                    <LeftColumn NodeId="10014" NodeName="Apply" Key="Yes" Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+                    <RightColumn NodeId="10017" NodeName="Apply 1" Key="Yes" Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+                </JoinColumn>
+            </KeyColumns>
+            <OutputColumns AutoSpec="Yes">
+                <RefDBColumn NodeId="10014" NodeName="Apply" Name="FEAT_PCA_2_17_FVAL" DataType="BINARY_DOUBLE" Status="Valid"/>
+                <RefDBColumn NodeId="10014" NodeName="Apply" Name="FEAT_PCA_2_17_FSET" DataType="ODMR_FEATURE_SET_NUMVD" Status="Valid"/>
+                <RefDBColumn NodeId="10014" NodeName="Apply" Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10017" NodeName="Apply 1" Name="CLUS_KM_1_17_CLID" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10017" NodeName="Apply 1" Name="CLUS_KM_1_17_PROB" DataType="BINARY_DOUBLE" Status="Valid"/>
+                <RefDBColumn NodeId="10017" NodeName="Apply 1" Name="CLUS_OC_1_17_CLID" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10017" NodeName="Apply 1" Name="CLUS_OC_1_17_PROB" DataType="BINARY_DOUBLE" Status="Valid"/>
+                <RefDBColumn NodeId="10017" NodeName="Apply 1" Name="CURRENCY" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10017" NodeName="Apply 1" Name="AMOUNTCREDIT_AVG" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10017" NodeName="Apply 1" Name="LOWESTBALANCE" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10017" NodeName="Apply 1" Name="SEGMENTATION1" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10017" NodeName="Apply 1" Name="ACCOUNTID_COUNT" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10017" NodeName="Apply 1" Name="CUSTOMERTYPE" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10017" NodeName="Apply 1" Name="CREDITLIMIT" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10017" NodeName="Apply 1" Name="AMOUNTDEBIT_AVG" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10017" NodeName="Apply 1" Name="DATEOFBALANCE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <RefDBColumn NodeId="10017" NodeName="Apply 1" Name="OPENEDBYTELLER" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10017" NodeName="Apply 1" Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid" Alias="ACCOUNTID1"/>
+                <RefDBColumn NodeId="10017" NodeName="Apply 1" Name="GENDER" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10017" NodeName="Apply 1" Name="CLOSINGBALANCE" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10017" NodeName="Apply 1" Name="SMART" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10017" NodeName="Apply 1" Name="UBMODEOFOPERATION" DataType="VARCHAR2" Status="Valid"/>
+            </OutputColumns>
+        </Join>
+        <ClusteringBuild Id="10005" Name="Clust Build" Status="Complete">
+            <Icon XCOORD="471" YCOORD="372"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <InMemoryColumnar Enable="false">
+                <PriorityLevel>PRIORITY NONE</PriorityLevel>
+                <CompressionMethod>INMEMORY MEMCOMPRESS FOR QUERY LOW</CompressionMethod>
+            </InMemoryColumnar>
+            <BuildDataSource SourceId="10001"/>
+            <CaseAttributes>
+                <Attribute Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+            </CaseAttributes>
+            <MiningAttributes AutoSpec="No">
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="ACCOUNTID_COUNT" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="AMOUNTCREDIT_AVG" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="AMOUNTDEBIT_AVG" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="CLOSINGBALANCE" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CREDITLIMIT" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CURRENCY" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CUSTOMERTYPE" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DATEOFBALANCE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="GENDER" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="LOWESTBALANCE" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="OPENEDBYTELLER" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="SEGMENTATION1" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="SMART" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="UBMODEOFOPERATION" DataType="VARCHAR2" Status="Valid"/>
+            </MiningAttributes>
+            <Stoplists>
+                <Stoplist Id="1" Name="Default" Type="Basic" Language="ENGLISH" DBName="">
+                    <StopTokens>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>Mr</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>Mrs</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>Ms</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>a</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>all</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>almost</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>also</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>although</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>an</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>and</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>any</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>are</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>as</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>at</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>be</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>because</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>been</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>both</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>but</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>by</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>can</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>could</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>d</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>did</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>do</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>does</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>either</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>for</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>from</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>had</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>has</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>have</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>having</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>he</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>her</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>here</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>hers</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>him</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>his</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>how</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>however</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>i</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>if</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>in</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>into</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>is</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>it</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>its</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>just</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>ll</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>me</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>might</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>my</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>no</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>non</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>nor</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>not</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>of</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>on</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>one</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>only</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>onto</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>or</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>our</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>ours</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>s</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>shall</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>she</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>should</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>since</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>so</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>some</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>still</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>such</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>t</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>than</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>that</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>the</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>their</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>them</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>then</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>there</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>therefore</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>these</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>they</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>this</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>those</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>though</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>through</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>thus</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>to</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>too</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>until</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>ve</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>very</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>was</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>we</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>were</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>what</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>when</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>where</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>whether</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>which</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>while</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>who</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>whose</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>why</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>will</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>with</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>would</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>yet</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>you</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>your</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>yours</Item>
+                        </Token>
+                    </StopTokens>
+                </Stoplist>
+            </Stoplists>
+            <TextSettings TransformType="Token" CategoricalCutOffValue="200">
+                <Token>
+                    <Token MaxNumberPerDoc="50" MaxNumberAllDocs="3000" Frequency="IDF" StoplistId="1" Policy="">
+                        <Lexer Name="" Type="Basic">
+                            <Settings/>
+                        </Lexer>
+                        <Languages>
+                            <Language Name="ENGLISH" Type="SingleByte"/>
+                        </Languages>
+                    </Token>
+                </Token>
+                <Theme Type="Single">
+                    <Token MaxNumberPerDoc="50" MaxNumberAllDocs="3000" Frequency="IDF" StoplistId="1" Policy="">
+                        <Lexer Type="Basic">
+                            <Settings>
+                                <Attribute Name="index_themes" ValueString="YES" Type="String"/>
+                                <Attribute Name="theme_language" ValueString="ENGLISH" Type="String"/>
+                            </Settings>
+                        </Lexer>
+                        <Languages>
+                            <Language Name="ENGLISH" Type="SingleByte"/>
+                        </Languages>
+                    </Token>
+                </Theme>
+            </TextSettings>
+            <TextAttributes/>
+            <HeuristicSummaryResult StatisticTable="ODMR$12_30_58_860307OXZDZOO">
+                <Attribute Name="ACCOUNTID"/>
+                <Attribute Name="CREDITLIMIT"/>
+                <Attribute Name="DATEOFBALANCE"/>
+                <Attribute Name="OPENEDBYTELLER"/>
+                <Attribute Name="SMART"/>
+            </HeuristicSummaryResult>
+            <Models>
+                <KMeansModel Id="10003" Name="CLUS_KM_1_17" Status="Complete" CreationDate="2018-10-03T14:25:06" Annotation="" UseForOutput="true">
+                    <InputMiningData DataUsage="AUTO" MiningUsage="AUTO">
+                        <MiningAttributes>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CURRENCY" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="AMOUNTCREDIT_AVG" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="LOWESTBALANCE" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="SEGMENTATION1" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="ACCOUNTID_COUNT" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CUSTOMERTYPE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CREDITLIMIT" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="AMOUNTDEBIT_AVG" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DATEOFBALANCE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="OPENEDBYTELLER" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="GENDER" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="CLOSINGBALANCE" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="SMART" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="UBMODEOFOPERATION" DataType="VARCHAR2" Status="Valid"/>
+                        </MiningAttributes>
+                        <HeuristicResult StatisticTable="ODMR$12_30_58_860307OXZDZOO">
+                            <Attribute Name="CREDITLIMIT"/>
+                            <Attribute Name="OPENEDBYTELLER"/>
+                            <Attribute Name="SMART"/>
+                        </HeuristicResult>
+                    </InputMiningData>
+                    <KMeansAlgo>
+                        <CLUS_NUM_CLUSTERS>3</CLUS_NUM_CLUSTERS>
+                        <KMNS_BLOCK_GROWTH>2</KMNS_BLOCK_GROWTH>
+                        <KMNS_CONV_TOLERANCE>0.01</KMNS_CONV_TOLERANCE>
+                        <KMNS_DISTANCE>KMNS_EUCLIDEAN</KMNS_DISTANCE>
+                        <KMNS_ITERATIONS>30</KMNS_ITERATIONS>
+                        <KMNS_MIN_PCT_ATTR_SUPPORT>0.1</KMNS_MIN_PCT_ATTR_SUPPORT>
+                        <KMNS_NUM_BINS>10</KMNS_NUM_BINS>
+                        <KMNS_SPLIT_CRITERION>KMNS_VARIANCE</KMNS_SPLIT_CRITERION>
+                    </KMeansAlgo>
+                </KMeansModel>
+                <OClusterModel Id="10002" Name="CLUS_OC_1_17" Status="Complete" CreationDate="2018-10-03T12:32:40" Annotation="" UseForOutput="true">
+                    <InputMiningData DataUsage="AUTO" MiningUsage="AUTO">
+                        <MiningAttributes>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CURRENCY" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="AMOUNTCREDIT_AVG" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="LOWESTBALANCE" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="SEGMENTATION1" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="ACCOUNTID_COUNT" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CUSTOMERTYPE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CREDITLIMIT" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="AMOUNTDEBIT_AVG" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DATEOFBALANCE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="OPENEDBYTELLER" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="GENDER" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="CLOSINGBALANCE" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="SMART" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="UBMODEOFOPERATION" DataType="VARCHAR2" Status="Valid"/>
+                        </MiningAttributes>
+                        <HeuristicResult StatisticTable="ODMR$12_30_58_860307OXZDZOO">
+                            <Attribute Name="CREDITLIMIT"/>
+                            <Attribute Name="OPENEDBYTELLER"/>
+                            <Attribute Name="SMART"/>
+                        </HeuristicResult>
+                    </InputMiningData>
+                    <OClusterAlgo>
+                        <CLUS_NUM_CLUSTERS>10</CLUS_NUM_CLUSTERS>
+                        <OCLT_MAX_BUFFER>50000.0</OCLT_MAX_BUFFER>
+                        <OCLT_SENSITIVITY>0.5</OCLT_SENSITIVITY>
+                    </OClusterAlgo>
+                </OClusterModel>
+            </Models>
+        </ClusteringBuild>
+        <FeatureExtractionBuild Id="10010" Name="Feature Build 1" Status="Complete">
+            <Icon XCOORD="470" YCOORD="128"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <InMemoryColumnar Enable="false">
+                <PriorityLevel>PRIORITY NONE</PriorityLevel>
+                <CompressionMethod>INMEMORY MEMCOMPRESS FOR QUERY LOW</CompressionMethod>
+            </InMemoryColumnar>
+            <BuildDataSource SourceId="10001"/>
+            <CaseAttributes>
+                <Attribute Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+            </CaseAttributes>
+            <MiningAttributes AutoSpec="Yes">
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="ACCOUNTID_COUNT" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="AMOUNTCREDIT_AVG" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="AMOUNTDEBIT_AVG" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="CLOSINGBALANCE" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CREDITLIMIT" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CURRENCY" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CUSTOMERTYPE" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DATEOFBALANCE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="GENDER" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="LOWESTBALANCE" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="OPENEDBYTELLER" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="SEGMENTATION1" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="SMART" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="UBMODEOFOPERATION" DataType="VARCHAR2" Status="Valid"/>
+            </MiningAttributes>
+            <Stoplists>
+                <Stoplist Id="1" Name="Default" Type="Basic" Language="ENGLISH" DBName="">
+                    <StopTokens>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>Mr</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>Mrs</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>Ms</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>a</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>all</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>almost</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>also</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>although</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>an</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>and</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>any</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>are</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>as</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>at</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>be</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>because</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>been</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>both</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>but</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>by</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>can</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>could</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>d</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>did</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>do</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>does</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>either</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>for</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>from</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>had</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>has</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>have</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>having</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>he</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>her</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>here</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>hers</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>him</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>his</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>how</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>however</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>i</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>if</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>in</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>into</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>is</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>it</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>its</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>just</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>ll</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>me</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>might</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>my</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>no</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>non</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>nor</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>not</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>of</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>on</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>one</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>only</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>onto</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>or</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>our</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>ours</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>s</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>shall</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>she</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>should</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>since</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>so</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>some</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>still</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>such</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>t</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>than</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>that</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>the</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>their</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>them</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>then</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>there</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>therefore</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>these</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>they</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>this</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>those</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>though</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>through</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>thus</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>to</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>too</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>until</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>ve</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>very</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>was</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>we</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>were</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>what</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>when</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>where</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>whether</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>which</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>while</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>who</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>whose</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>why</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>will</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>with</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>would</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>yet</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>you</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>your</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>yours</Item>
+                        </Token>
+                    </StopTokens>
+                </Stoplist>
+            </Stoplists>
+            <TextSettings TransformType="Token" CategoricalCutOffValue="200">
+                <Token>
+                    <Token MaxNumberPerDoc="50" MaxNumberAllDocs="3000" Frequency="IDF" StoplistId="1" Policy="">
+                        <Lexer Name="" Type="Basic">
+                            <Settings/>
+                        </Lexer>
+                        <Languages>
+                            <Language Name="ENGLISH" Type="SingleByte"/>
+                        </Languages>
+                    </Token>
+                </Token>
+                <Theme Type="Single">
+                    <Token MaxNumberPerDoc="50" MaxNumberAllDocs="3000" Frequency="IDF" StoplistId="1" Policy="">
+                        <Lexer Type="Basic">
+                            <Settings>
+                                <Attribute Name="index_themes" ValueString="YES" Type="String"/>
+                                <Attribute Name="theme_language" ValueString="ENGLISH" Type="String"/>
+                            </Settings>
+                        </Lexer>
+                        <Languages>
+                            <Language Name="ENGLISH" Type="SingleByte"/>
+                        </Languages>
+                    </Token>
+                </Theme>
+            </TextSettings>
+            <TextAttributes/>
+            <HeuristicSummaryResult StatisticTable="ODMR$12_28_40_193684VIUVNCX">
+                <Attribute Name="ACCOUNTID">
+                    <Reason Type="INPUT_NONE"/>
+                </Attribute>
+                <Attribute Name="CREDITLIMIT">
+                    <Reason Type="INPUT_NONE"/>
+                    <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                </Attribute>
+                <Attribute Name="CURRENCY">
+                    <Reason Type="INPUT_NONE"/>
+                </Attribute>
+                <Attribute Name="CUSTOMERTYPE">
+                    <Reason Type="INPUT_NONE"/>
+                </Attribute>
+                <Attribute Name="DATEOFBALANCE">
+                    <Reason Type="INPUT_NONE"/>
+                </Attribute>
+                <Attribute Name="GENDER">
+                    <Reason Type="INPUT_NONE"/>
+                </Attribute>
+                <Attribute Name="OPENEDBYTELLER">
+                    <Reason Type="INPUT_NONE"/>
+                </Attribute>
+                <Attribute Name="SEGMENTATION1">
+                    <Reason Type="INPUT_NONE"/>
+                </Attribute>
+                <Attribute Name="SMART">
+                    <Reason Type="INPUT_NONE"/>
+                    <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                </Attribute>
+                <Attribute Name="UBMODEOFOPERATION">
+                    <Reason Type="INPUT_NONE"/>
+                </Attribute>
+            </HeuristicSummaryResult>
+            <Models>
+                <PCAModel Id="10011" Name="FEAT_PCA_2_17" Status="Complete" CreationDate="2018-10-03T12:28:45" Annotation="" UseForOutput="true">
+                    <InputMiningData DataUsage="AUTO" MiningUsage="AUTO">
+                        <MiningAttributes>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CURRENCY" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="AMOUNTCREDIT_AVG" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="LOWESTBALANCE" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="SEGMENTATION1" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="ACCOUNTID_COUNT" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CUSTOMERTYPE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CREDITLIMIT" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="AMOUNTDEBIT_AVG" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="DATEOFBALANCE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="OPENEDBYTELLER" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="GENDER" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="CLOSINGBALANCE" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="SMART" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="UBMODEOFOPERATION" DataType="VARCHAR2" Status="Valid"/>
+                        </MiningAttributes>
+                        <HeuristicResult StatisticTable="ODMR$12_28_40_193684VIUVNCX">
+                            <Attribute Name="CREDITLIMIT">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="OPENEDBYTELLER">
+                                <Reason Type="CAT_UNIQUE_COUNT_LIMIT"/>
+                            </Attribute>
+                            <Attribute Name="SMART">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                        </HeuristicResult>
+                    </InputMiningData>
+                    <PCAAlgo>
+                        <FEAT_NUM_FEATURES>2</FEAT_NUM_FEATURES>
+                        <SVDS_U_MATRIX_OUTPUT>SVDS_U_MATRIX_DISABLE</SVDS_U_MATRIX_OUTPUT>
+                        <SVDS_SCORING_MODE>SVDS_SCORING_PCA</SVDS_SCORING_MODE>
+                    </PCAAlgo>
+                </PCAModel>
+            </Models>
+        </FeatureExtractionBuild>
+        <Apply ColumnOutputOrder="SupplementalColumns" OrderPartitions="Yes" Id="10014" Name="Apply" Status="Complete">
+            <Icon XCOORD="721" YCOORD="127"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <InMemoryColumnar Enable="false">
+                <PriorityLevel>PRIORITY NONE</PriorityLevel>
+                <CompressionMethod>INMEMORY MEMCOMPRESS FOR QUERY LOW</CompressionMethod>
+            </InMemoryColumnar>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10014" as (SELECT 
+"ACCOUNTID", 
+FEATURE_VALUE("FEAT_PCA_2_17" USING *) "FEAT_PCA_2_17_FVAL", 
+CAST(FEATURE_SET("FEAT_PCA_2_17", NULL USING *) AS ODMR_FEATURE_SET_NUMVD) "FEAT_PCA_2_17_FSET"
+FROM {INPUT_SOURCE} )</SQLExpression>
+            <SupplementalAttributes AutoSpec="No">
+                <Attribute Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+            </SupplementalAttributes>
+            <OutputColumns AutoSpec="No">
+                <OutputColumn>
+                    <Model IsModelBuilt="true" NodeId="10010" Schema="" Name="FEAT_PCA_2_17" MiningFunction="FEATURE_EXTRACTION" MiningAlgorithm="PRINCIPAL_COMPONENT_ANALYSIS" Status="Valid" UseForOutput="true" ModelId="10011"/>
+                    <FeatureValue>
+                        <Column Name="FEAT_PCA_2_17_FVAL"/>
+                    </FeatureValue>
+                </OutputColumn>
+                <OutputColumn>
+                    <Model IsModelBuilt="true" NodeId="10010" Schema="" Name="FEAT_PCA_2_17" MiningFunction="FEATURE_EXTRACTION" MiningAlgorithm="PRINCIPAL_COMPONENT_ANALYSIS" Status="Valid" UseForOutput="true" ModelId="10011"/>
+                    <FeatureSet>
+                        <Column Name="FEAT_PCA_2_17_FSET" TopNValue="2147483647"/>
+                    </FeatureSet>
+                </OutputColumn>
+            </OutputColumns>
+            <CaseAttributes>
+                <Attribute Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+            </CaseAttributes>
+        </Apply>
+        <Apply ColumnOutputOrder="SupplementalColumns" OrderPartitions="Yes" Id="10017" Name="Apply 1" Status="Complete">
+            <Icon XCOORD="715" YCOORD="373"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <InMemoryColumnar Enable="false">
+                <PriorityLevel>PRIORITY NONE</PriorityLevel>
+                <CompressionMethod>INMEMORY MEMCOMPRESS FOR QUERY LOW</CompressionMethod>
+            </InMemoryColumnar>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10017" as (SELECT 
+"CURRENCY", 
+"AMOUNTCREDIT_AVG", 
+"LOWESTBALANCE", 
+"SEGMENTATION1", 
+"ACCOUNTID_COUNT", 
+"CUSTOMERTYPE", 
+"CREDITLIMIT", 
+"AMOUNTDEBIT_AVG", 
+"DATEOFBALANCE", 
+"OPENEDBYTELLER", 
+"ACCOUNTID", 
+"GENDER", 
+"CLOSINGBALANCE", 
+"SMART", 
+"UBMODEOFOPERATION", 
+CLUSTER_ID("CLUS_KM_1_17" USING *) "CLUS_KM_1_17_CLID", 
+CLUSTER_PROBABILITY("CLUS_KM_1_17" USING *) "CLUS_KM_1_17_PROB", 
+CLUSTER_ID("CLUS_OC_1_17" USING *) "CLUS_OC_1_17_CLID", 
+CLUSTER_PROBABILITY("CLUS_OC_1_17" USING *) "CLUS_OC_1_17_PROB"
+FROM {INPUT_SOURCE} )</SQLExpression>
+            <SupplementalAttributes AutoSpec="No">
+                <Attribute Name="CURRENCY" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="AMOUNTCREDIT_AVG" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="LOWESTBALANCE" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="SEGMENTATION1" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="ACCOUNTID_COUNT" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUSTOMERTYPE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CREDITLIMIT" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="AMOUNTDEBIT_AVG" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="DATEOFBALANCE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute Name="OPENEDBYTELLER" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="GENDER" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CLOSINGBALANCE" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="SMART" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="UBMODEOFOPERATION" DataType="VARCHAR2" Status="Valid"/>
+            </SupplementalAttributes>
+            <OutputColumns AutoSpec="Yes">
+                <OutputColumn>
+                    <Model IsModelBuilt="true" NodeId="10005" Schema="" Name="CLUS_KM_1_17" MiningFunction="CLUSTERING" MiningAlgorithm="KMEANS" Status="Valid" UseForOutput="true" ModelId="10003"/>
+                    <ClusterId>
+                        <Column Name="CLUS_KM_1_17_CLID"/>
+                    </ClusterId>
+                </OutputColumn>
+                <OutputColumn>
+                    <Model IsModelBuilt="true" NodeId="10005" Schema="" Name="CLUS_KM_1_17" MiningFunction="CLUSTERING" MiningAlgorithm="KMEANS" Status="Valid" UseForOutput="true" ModelId="10003"/>
+                    <ClusterProbability>
+                        <Column Name="CLUS_KM_1_17_PROB"/>
+                    </ClusterProbability>
+                </OutputColumn>
+                <OutputColumn>
+                    <Model IsModelBuilt="true" NodeId="10005" Schema="" Name="CLUS_OC_1_17" MiningFunction="CLUSTERING" MiningAlgorithm="O_CLUSTER" Status="Valid" UseForOutput="true" ModelId="10002"/>
+                    <ClusterId>
+                        <Column Name="CLUS_OC_1_17_CLID"/>
+                    </ClusterId>
+                </OutputColumn>
+                <OutputColumn>
+                    <Model IsModelBuilt="true" NodeId="10005" Schema="" Name="CLUS_OC_1_17" MiningFunction="CLUSTERING" MiningAlgorithm="O_CLUSTER" Status="Valid" UseForOutput="true" ModelId="10002"/>
+                    <ClusterProbability>
+                        <Column Name="CLUS_OC_1_17_PROB"/>
+                    </ClusterProbability>
+                </OutputColumn>
+            </OutputColumns>
+            <CaseAttributes/>
+        </Apply>
+        <Graph ViewName="OUTPUT_1_17" ViewDirty="true" SampleDirty="true" Id="10025" Name="Graph" Status="Ready">
+            <Icon XCOORD="934" YCOORD="488"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <InMemoryColumnar Enable="false">
+                <PriorityLevel>PRIORITY NONE</PriorityLevel>
+                <CompressionMethod>INMEMORY MEMCOMPRESS FOR QUERY LOW</CompressionMethod>
+            </InMemoryColumnar>
+            <CacheSettings UseFullData="false" GenerateCache="true">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10025" as (SELECT 
+"CLUS_KM_1_17_CLID"
+, "CLUS_KM_1_17_PROB"
+, "CLUS_OC_1_17_CLID"
+, "CLUS_OC_1_17_PROB"
+, "CURRENCY"
+, "AMOUNTCREDIT_AVG"
+, "LOWESTBALANCE"
+, "SEGMENTATION1"
+, "ACCOUNTID_COUNT"
+, "CUSTOMERTYPE"
+, "CREDITLIMIT"
+, "AMOUNTDEBIT_AVG"
+, "DATEOFBALANCE"
+, "OPENEDBYTELLER"
+, "ACCOUNTID"
+, "GENDER"
+, "CLOSINGBALANCE"
+, "SMART"
+, "UBMODEOFOPERATION"
+
+FROM
+{INPUT_SOURCE}
+ )</SQLExpression>
+            <GraphSettings>
+                <GraphSetting Name="Graph1" Type="Scatter" Id="39f43a89-f6d5-40d1-b82b-071dcd5ff966">
+                    <Comment></Comment>
+                    <XAttribute Name="AMOUNTCREDIT_AVG" DataType="NUMBER" Status="Valid"/>
+                    <XBinningSettings BinningEnabled="false" BinningKind="EqualWidth">
+                        <NumericBinCount>10</NumericBinCount>
+                    </XBinningSettings>
+                    <YAttributes>
+                        <YAttribute Name="ACCOUNTID_COUNT" DataType="NUMBER" Status="Valid"/>
+                    </YAttributes>
+                    <GroupByOption GroupByEnabled="false">
+                        <GroupByAttribute Name="&lt;dummy&gt;" DataType="&lt;dummy&gt;" Status="Missing" Alias="&lt;dummy&gt;"/>
+                        <BinningSettings BinningEnabled="false" BinningKind="EqualWidth">
+                            <NumericBinCount>10</NumericBinCount>
+                        </BinningSettings>
+                    </GroupByOption>
+                </GraphSetting>
+            </GraphSettings>
+            <GraphSourceAttributes>
+                <Attribute Name="CLUS_KM_1_17_CLID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CLUS_KM_1_17_PROB" DataType="BINARY_DOUBLE" Status="Valid"/>
+                <Attribute Name="CLUS_OC_1_17_CLID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CLUS_OC_1_17_PROB" DataType="BINARY_DOUBLE" Status="Valid"/>
+                <Attribute Name="CURRENCY" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="AMOUNTCREDIT_AVG" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="LOWESTBALANCE" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="SEGMENTATION1" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="ACCOUNTID_COUNT" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUSTOMERTYPE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CREDITLIMIT" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="AMOUNTDEBIT_AVG" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="DATEOFBALANCE" DataType="TIMESTAMP(6)" Status="Valid"/>
+                <Attribute Name="OPENEDBYTELLER" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="ACCOUNTID" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="GENDER" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CLOSINGBALANCE" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="SMART" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="UBMODEOFOPERATION" DataType="VARCHAR2" Status="Valid"/>
+            </GraphSourceAttributes>
+            <SampleSettings UseFullData="false" GenerateCache="true">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <Random Seed="12345"/>
+                </Method>
+            </SampleSettings>
+        </Graph>
+    </Nodes>
+    <Links>
+        <Link Id="10012" From="10001" To="10010" Name="Link" Label="From &quot;IMPOTANT_ATTR&quot; to &quot;Feature Build 1&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10013" From="10001" To="10005" Name="Link" Label="From &quot;IMPOTANT_ATTR&quot; to &quot;Clust Build&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10015" From="10010" To="10014" Name="Link" Label="From &quot;Feature Build 1&quot; to &quot;Apply&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10016" From="10001" To="10014" Name="Link" Label="From &quot;IMPOTANT_ATTR&quot; to &quot;Apply&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10018" From="10005" To="10017" Name="Link" Label="From &quot;Clust Build&quot; to &quot;Apply 1&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10019" From="10001" To="10017" Name="Link" Label="From &quot;IMPOTANT_ATTR&quot; to &quot;Apply 1&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10023" From="10014" To="10022" Name="Link" Label="From &quot;Apply&quot; to &quot;Join&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10024" From="10017" To="10022" Name="Link" Label="From &quot;Apply 1&quot; to &quot;Join&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10026" From="10017" To="10025" Name="Link" Label="From &quot;Apply 1&quot; to &quot;Graph&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10028" From="10014" To="10027" Name="Link" Label="From &quot;Apply&quot; to &quot;OUTPUT_2_17&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+    </Links>
+</WorkflowProcess>
