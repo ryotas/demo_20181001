@@ -21,3 +21,7 @@ Locate sample data (not included in this repository).
 Run the all scripts.
 
     $ run.sh
+
+Open Data Miner, create a connection, import workflows.
+
+Open Data Visualization Desktop, import project files.
