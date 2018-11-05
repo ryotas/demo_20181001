@@ -24,4 +24,8 @@ Run the all scripts.
 
 Open Data Miner, create a connection, import workflows.
 
+* Username: demo
+* Password: welcome1
+* SID: orcl
+
 Open Data Visualization Desktop, import project files.
