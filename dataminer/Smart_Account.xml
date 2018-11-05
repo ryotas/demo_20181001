@@ -203,27 +203,27 @@ from "DEMO"."TRANSACTION"  )</SQLExpression>
                     <TopN/>
                 </Method>
             </CacheSettings>
-            <SQLExpression>"N$10156" as (select "CUSTOMER_DB"."CUSTOMERCODE", 
-"CUSTOMER_DB"."SHORTNAME", 
-"CUSTOMER_DB"."FIRSTNAME", 
-"CUSTOMER_DB"."UBRELATIONSHIPMGRID", 
-"CUSTOMER_DB"."SUBCATEGORY", 
-"CUSTOMER_DB"."CUSTOMERTYPE", 
-"CUSTOMER_DB"."KYCSTATUS", 
-"CUSTOMER_DB"."NRCNO", 
-"CUSTOMER_DB"."CUSTOMERSUBTYPE", 
-"CUSTOMER_DB"."LASTNAME", 
-"CUSTOMER_DB"."DATEMODIFIED", 
-"CUSTOMER_DB"."DOB", 
-"CUSTOMER_DB"."SEGMENTATION", 
-"CUSTOMER_DB"."GENDER", 
-"CUSTOMER_DB"."ADDRESSLINE3", 
-"CUSTOMER_DB"."ADDRESSLINE2", 
-"CUSTOMER_DB"."ADDRESSLINE5", 
-"CUSTOMER_DB"."ADDRESSLINE4", 
-"CUSTOMER_DB"."BLACKLISTED", 
-"CUSTOMER_DB"."DATECREATED" 
-from "DEMO"."CUSTOMER_DB"  )</SQLExpression>
+            <SQLExpression>"N$10156" as (select "CUSTOMER"."CUSTOMERCODE", 
+"CUSTOMER"."SHORTNAME", 
+"CUSTOMER"."FIRSTNAME", 
+"CUSTOMER"."UBRELATIONSHIPMGRID", 
+"CUSTOMER"."SUBCATEGORY", 
+"CUSTOMER"."CUSTOMERTYPE", 
+"CUSTOMER"."KYCSTATUS", 
+"CUSTOMER"."NRCNO", 
+"CUSTOMER"."CUSTOMERSUBTYPE", 
+"CUSTOMER"."LASTNAME", 
+"CUSTOMER"."DATEMODIFIED", 
+"CUSTOMER"."DOB", 
+"CUSTOMER"."SEGMENTATION", 
+"CUSTOMER"."GENDER", 
+"CUSTOMER"."ADDRESSLINE3", 
+"CUSTOMER"."ADDRESSLINE2", 
+"CUSTOMER"."ADDRESSLINE5", 
+"CUSTOMER"."ADDRESSLINE4", 
+"CUSTOMER"."BLACKLISTED", 
+"CUSTOMER"."DATECREATED" 
+from "DEMO"."CUSTOMER"  )</SQLExpression>
             <Attributes>
                 <Attribute Name="ADDRESSLINE2" DataType="VARCHAR2" Status="Valid"/>
                 <Attribute Name="ADDRESSLINE3" DataType="VARCHAR2" Status="Valid"/>
@@ -246,7 +246,7 @@ from "DEMO"."CUSTOMER_DB"  )</SQLExpression>
                 <Attribute Name="SUBCATEGORY" DataType="VARCHAR2" Status="Valid"/>
                 <Attribute Name="UBRELATIONSHIPMGRID" DataType="VARCHAR2" Status="Valid"/>
             </Attributes>
-            <SourceTable Schema="" Name="CUSTOMER_DB" Synonym="false"/>
+            <SourceTable Schema="" Name="CUSTOMER" Synonym="false"/>
             <JSONColumns/>
             <DataGuideSettings Generate="true" UseFullData="false" UseFullDoc="false">
                 <NumberOfRows>2000</NumberOfRows>
