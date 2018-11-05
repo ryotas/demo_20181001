@@ -22,10 +22,10 @@ Run the all scripts.
 
     $ run.sh
 
-Open Data Miner, create a connection, import workflows.
+Open Data Miner, create a connection, import workflows under ./dataminer directory.
 
 * Username: demo
 * Password: welcome1
 * SID: orcl
 
-Open Data Visualization Desktop, import project files.
+Open Data Visualization Desktop, import project files under ./dvd directory.
